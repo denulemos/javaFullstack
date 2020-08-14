@@ -66,10 +66,185 @@ Además, TCP/IP divide las distintas tareas de comunicación en capas. Cada capa
 
 El propósito de las capas es crear un sistema estandarizado, sin que los distintos fabricantes de hardware y software tengan que gestionar la comunicación por su cuenta. Es como conducir un coche: todos los fabricantes convienen en la posición de los pedales, así que no tenemos que tener eso en cuenta al cambiar de coche. También significa que es posible actualizar determinadas capas, por ejemplo, para mejorar el rendimiento o la seguridad, sin tener que actualizar todo el sistema.
 
-
 **Las cuatro capas del modelo TCP/IP**
 
-1. **Capa de Enlace de Datos**:
-2. **Capa de Internet**
-3. **Capa de transporte**
-4. **Capa de aplicaciones**
+1. **Capa de Enlace de Datos**: La capa de enlace de datos (también denominada capa de enlace, capa de interfaz de red o capa física) es la que maneja las partes físicas del envío y recepción de datos mediante el cable Ethernet, la red inalámbrica, la tarjeta de interfaz de red, el controlador del dispositivo en el equipo, etcétera.
+2. **Capa de Internet** La capa de Internet (también denominada capa de red) controla el movimiento de los paquetes alrededor de la red.
+3. **Capa de transporte** Proporciona la conexion de datos fiable entre dos dispositivos. Divide los datos en paquetes, hace acuse de recibo de los paquetes que recibe del otro dispositivo y se asegura de que el otro dispositivo haga acuse de recbo de los que recibe a su vez.
+4. **Capa de aplicaciones** La capa de aplicaciones es el grupo de aplicaciones que requiere comunicación de red. Es con lo que el usuario suele interactuar, como el correo electrónico y la mensajería. Como la capa inferior gestiona los detalles de la comunicación, las aplicaciones no tienen que preocuparse por ello.
+
+**¿Mis paquetes de datos se mantienen privados?**
+
+No. Cuando los paquetes se transmiten entre equipos, son vulnerables y otros pueden verlos. Esa es una de las razones por las que se aconseja evitar las redes Wi-Fi públicas para enviar datos que deban mantenerse privados, así como utilizar cifrado.
+
+Si esto es algo que le preocupa (por ejemplo, si va a enviar información de identificación personal o datos financieros), puede cifrar los datos empleando una red privada virtual (VPN) o trabajando con páginas web con seguridad https.
+
+**¿TCP/IP Funciona con todas las direcciones IP?**
+
+Hay varios tipos de direcciones IP. No obstante, todas ellas utilizan TCP/IP.
+
+Las diferencias entre los tipos de direcciones IP son transparentes para el usuario esporádico, y el hecho de que no necesite saber mucho al respecto es una de las ventajas de TCP/IP. Normalmente, estos asuntos los administra quien haya configurado el sistema operativo del equipo o el dispositivo móvil. En cualquier caso, a modo de aclaración:
+
+**Las direcciones IP estáticas no cambian en ningún momento. Son como la dirección fija de su domicilio, un dato inalterable.**
+
+**Las direcciones IP dinámicas cambian, o al menos están diseñadas para cambiar. Cuando un sistema informático utiliza una dirección IP dinámica, anuncia “¡aquí es donde puedes encontrarme!” a la red local.**
+
+Tal vez haya oído hablar de ciudades en las que la población crece tan rápido que se han tenido que crear nuevos códigos de área para que los recién llegados puedan tener número de teléfono. Con el número siempre creciente de dispositivos conectados, TCP/IP ha tenido un problema similar. Básicamente, Internet se estaba quedando sin direcciones IP. Por eso se desarrolló una nueva versión de dirección IP denominada IPv6, una alternativa a las direcciones IPv4 existentes.
+
+De hecho, TCP/IP se incluye como estándar
+
+TCP/IP es el paquete de protocolos más utilizado en la web. Millones de personas lo emplean cada día, aunque no sean conscientes de ello.
+
+En la inmensa mayoría de los equipos, TCP/IP se integra como estándar. No tiene que hacer nada para configurarlo de manera manual. En ocasiones, tal vez tenga que decirle a una aplicación cuál es su dirección TCP/IP.
+
+En algunas circunstancias puede querer ocultar su dirección IP, normalmente por motivos de seguridad.
+
+**¿Como puedo saber cual es mi direccion TCP/IP?**
+
+Cada dispositivo tiene su propia dirección TCP/IP. Por lo general, el dispositivo puede comunicarse automáticamente, pero a veces es necesario proporcionar su dirección TCP/IP de forma manual. El modo de encontrar su dirección IP depende del sistema operativo.
+
+Podés consultar tu IP pública desde una página web como *https://www.cual-es-mi-ip.net/*
+
+Conceptualmente, el número obtenido se puede asemejar a la “dirección” de una habitación de hotel, en la que la gerencia del mismo sabe que puede encontrarlo o el número de teléfono de tu celular.
+
+## Conceptos HTML
+
+**Ingresando al mundo HTML**
+
+HTML es el primer paso que debería completar cualquier persona que quiera dedicarse al desarrollo de web en general. Es además un conocimiento recomendado para cualquier persona que trabaje en el medio Internet.
+
+Este es un manual con bastante detalle, que empieza en el conocimiento más básico y recorre cada uno de los elementos que se pueden usar para construir todo tipo de contenido en una web, repasando las etiquetas disponibles en el lenguaje. Las distintas secciones del manual de HTML te llevarán desde la creación de contenido básico como párrafos o listas, hasta el trabajo con formularios, tablas y otros elementos más complejos.
+
+Entonces, en esta sección HTML,tiene como objetivo que aprenderás a trabajar con todo el conjunto de etiquetas que existen en este lenguaje, pero además a entender cuáles son los mecanismos habituales para construir páginas web, adaptadas a las costumbres más actuales.
+
+Puede que en un principio, el hecho de hablar de un lenguaje informático te ponga un poco nervioso, sin embargo, el HTML no deja de ser más que una forma sencilla de especificar el contenido de las páginas, indicando el texto y otros elementos como imágenes, tablas, listas, etc. Al final es de suma importancia el lenguaje porque es el medio con el cual se suministra el contenido a los navegadores y por tanto, si queremos comenzar a aprender a crear páginas web, necesariamente debemos comenzar por aquí.
+
+En esta sección será practica y teórica. Iremos conociendo el lenguaje a través de numerosos ejemplos que te sugerimos realizar por ti mismo para asimilar mejor los conocimientos.
+
+Verás también como HTML dentro del contexto de la creación de una página web, se apoya en sobre editores, programas para subir archivos al servidor, etc.
+
+Es necesario leer este texto para cualquier persona, que con conocimientos de informática, desean hacer proyectos front-end en cualquier lenguaje.
+
+Con ganas y realizando los ejercicios all final, tendrás las habilidades y conocimientos como para realizar una página web por tu cuenta que esté lista para publicar. Además podrás:
+
+* Identificar qué se debe hacer con HTML y qué no.
+* Capacidad para crear y publicar vuestro propio sitio web con un mínimo de calidad.
+* Conocimientos de todo tipo sobre las tecnologías y herramientas empleadas en el ámbito de la Red.
+
+**Primeras cosas a saber**
+
+HTML es el lenguaje con el que se escribe el contenido de las páginas web.
+
+Las páginas web pueden ser vistas por el usuario mediante un tipo de aplicación llamada cliente web o más comúnmente "navegador". Podemos decir por lo tanto que el HTML es el lenguaje usado por para especificar el contenido que los navegadores deben representar a la hora de mostrar una página web.
+
+Este lenguaje nos permite aglutinar textos, imágenes, enlaces... y combinarlos a nuestro gusto. La ventaja del HTML a la hora de representar el contenido en un navegador, con respecto a otros formatos físicos como libros o revistas, es justamente la posibilidad de colocar referencias a otras páginas, por medio de los enlaces hipertexto.
+
+**Historia**
+
+El lenguaje HTML se creó en 1991. Tiene una historia realmente corta pero para su poca vida ha sufrido importantes cambios. Su padre es Tim Berners-Lee que lo diseñó con objetivos divulgativos. Inicialmente no se pensó que la web llegaría a ser un área de ocio con carácter multimedia, de modo que, nació sin dar respuesta a todos los posibles usos que se le iba a dar y a todos los colectivos de gente que lo utilizarían en un futuro. Sin embargo, pese a esta deficiente planificación, si que se han ido incorporando modificaciones con el tiempo, agregando nuevas características para cubrir las nuevas necesidades.
+
+Como hemos dicho, los programas que leen y presentan las páginas web a los usuarios se llaman navegadores. Éstos son los responsables de interpretar el HTML y "pintar" una página tal como ellos entiendan que deben hacer. Sin embargo, esas reglas de representación no son subjetivas de cada fabricante del navegador, sino que existe una organización llamada W3C que se encarga de definir el estándar que todos deben seguir a la hora de escribir e interpretar el HTML. Estos estándares del HTML se conocen como "Especificaciones", las cuales han ido apareciendo en el tiempo. El HTML5 es el último estándar en la actualidad.
+
+Históricamente los navegadores, además de la propia comunidad de usuarios, han sido los mayores impulsores de los cambios ocurridos en el lenguaje. Una vez detectada la necesidad es el W3C el que crea el estándar y marca una dirección que todos deben seguir.
+
+**Problemas de Navegadores**
+
+El conflicto generado por los navegadores es debido a su diversidad. Existen multitud de navegadores o clientes web presentes en el mercado los cuales muchas veces no son capaces de interpretar un mismo código de una manera unificada. Esto obliga al desarrollador a, una vez creada su página, comprobar que esta puede ser leída satisfactoriamente por todos los navegadores, o al menos, los más utilizados. Cuando surgen problemas de interpretación, queda de parte del desarrollador resolver el problema tirando de técnicas o conocimientos que él disponga.
+
+Afortunadamente, en la actualidad las diferencias de interpretación de los navegadores con respecto a un mismo código HTML son mínimos, pero en el pasado los desarrolladores tenían que emplear mucho tiempo en remar contracorriente para solucionarlos. Sin embargo, quedan todavía muchos usuarios que navegan con sistemas anticuados, ya sea por falta de interés para actualizarse, conocimientos, o por disponer ordenadores muy antiguos.
+
+Pero no todo ha sido malo por parte de los navegadores. Ellos también son los responsables de introducir nuevas etiquetas en el uso común del día a día, que se han ido incorporando al estándar HTML en sucesivas versiones. Aunque antes de estandarizarse esas etiquetas era común que cada navegador crease su etiqueta propietaria para resolver la misma necesidad, lo que obligaba a los desarrolladores a repetir código o incluso a hacer versiones de páginas diferentes para navegadores. Con todo esto no queremos asustar a nadie y volvemos a repetir que las diferencias en la actualidad son mínimas, pero sí deseamos que quede clara la necesidad de la estandarización creada por el W3C, responsable de marcar una pauta que actualmente cumplen todos los navegadores modernos de manera bastante fiel.
+
+**Lenguajes de la web**
+
+HTML no está solo como único lenguaje para crear la web, aunque en un principio sí que era así. Su evolución tan anárquica ha supuesto toda una seria de inconvenientes y deficiencias que han debido ser superados con la introducción de otras tecnologías accesorias capaces de organizar, optimizar y automatizar el funcionamiento de las webs. Ejemplos que pueden sonaros son las CSS, o JavaScript. Veremos más adelante en qué consisten estas tecnologías.
+
+Lo que es importante para el desarrollador es conocer el enfoque de cada lenguaje, para saber cuál es la manera correcta de utilizarlo y cómo se complementan los unos a los otros. No es necesario que se sea experto en todos ellos, pero sí saber qué cosas se deberían hacer con cada cual, para no cometer errores que deriven en una mala interpretación por parte de los navegadores. Así mismo tenemos que pensar que no todas las personas van a acceder a una web a través de un ordenador, sino también de un teléfono o de navegadores especializados en donde la accesibilidad debe ser diferente. Es por ello que es importante escribir correctamente los lenguajes, respetando los estándares y así cada navegador podrá hacer su mejor papel para representar la pagina lo más correctamente posible.
+
+Deseamos incidir mucho en este detalle, la correcta utilización del HTML: escribir el contenido, para que nuestro trabajo sea lo más adecuado y de elevada calidad.
+
+**Editores HTML**
+
+Además del navegador necesario para ver los resultados de nuestro trabajo, necesitamos evidentemente otra herramienta capaz de crear la página en si.
+
+Un archivo HTML (una página) no es más que un texto plano (sin forma estética) al que le colocamos extensión ".html". Es por ello que para programar en HTML necesitamos un editor de texto.
+
+Es recomendable usar un editor de textos sencillo, de texto plano
+
+Queremos remarcar que nunca se debe usar el tipo de editor de textos que se usan para escribir documentos, cartas, trabajos para el colegio, como Wordpad o Microsoft Word, pues colocan su propio código especial al guardar los documentos y HTML es únicamente texto plano, con lo que podremos tener problemas.
+
+Aunque para aprender es recomendable que se use un programa que te permita escribir el código plano, podés comenzar tus primeros pasos con algún editor que genera el código mientras escribís en un procesador de texto al estilo Word. Te recomendaría el uso de Kompozer, un sistema gratuito y que puede ayudarte a iniciar en el código HTML, posteriormente, creo que se puede continuar con Geany, como para iniciar las etapas de creación de páginas web profesionales.
+
+El tipo de editores que recomendamos son aquellos específicos para la edición de código, los cuales están pensados para facilitar los procesos de la programación y de la escritura de código plano como el del lenguaje HTML. Existen infinidad de editores de código interesantes, que nos aportan más o menos facilidades y que nos permiten aumentar nuestra productividad. No obstante, es aconsejable en un principio utilizar una herramienta lo más sencilla posible para poder prestar la máxima atención a nuestro código y familiarizarnos lo antes posible con él. Siempre tendremos tiempo más delante de pasarnos a editores más versátiles con la consiguiente ganancia de tiempo.
+
+No es posible decir a nadie el editor que debe de usar, porque cada uno tendrá sus preferencias. Igualmente para quienes están comenzando nosotros recomendamos:
+
+* Notepad++
+* Geany
+* Brackets
+
+Igualmente una persona que comience puede pensar que tienen muchas opciones, pero realmente podemos comenzar con lo básico, crear nuevos archivos, editar el código, guardarlos en nuestro disco duro... y punto. Recomendamos estos editores porque están disponibles para todas las plataformas, Windows, Mac y Linux y porque son gratuitos para cualquier uso.
+
+Aunque comenzaremos a usar HTML para definir cómo se puede ver un contenido, por ejemplo: si el texto debe tener color rojo, o el tamaño de la letra, o si se debe alinear a la derecha, es de destacar que actualmente para especificar el aspecto que debe tener una web se usa un lenguaje complementario, llamado CSS.
+
+*En resumen, HTML sirve para decir qué contenido debe tener una página y CSS sirve para decir cómo se debe representar tal contenido, con qué estilo, color, imágenes etc... Es fácil saltarse esta regla, porque en HTML existen diversas etiquetas (y atributos, de los que ya hablaremos) que realmente están pensados para definir la [presentación](https://aulasvirtuales.bue.edu.ar/mod/lesson/view.php?id=6310 "Presentación"). Es una herencia de versiones pasadas del HTML y aunque comenzaremos de esa forma  debemos recordar que usar HTML para definir cómo debe de representarse un elemento en la página no es técnicamente correcto.*
+
+### Sintaxis
+
+El HTML es un "lenguaje de marcado". Basa su sintaxis en un elemento base al que llamamos marca, tag o simplemente etiqueta. A través de las etiquetas vamos definiendo los elementos del documento, como enlaces, párrafos, imágenes, etc. Así pues, un documento HTML estará constituido por texto y un conjunto de etiquetas para definir la función que juega cada contenido dentro de la página. Todo eso servirá al navegador para saber cómo se tendrá que presentar el texto y otros elementos en la página.
+
+Existen etiquetas para crear negritas, párrafos, imágenes, tablas, listas, enlaces, etc. Así pues, aprender HTML es básicamente aprenderse una serie de etiquetas, sus funciones, sus usos y saber un poco sobre cómo debe de construirse un documento básico. Es una tarea muy sencilla de afrontar, al alcance de cualquier personas, puesto que el lenguaje es muy entendible por los seres humanos.
+
+**Anatomia de una etiqueta**
+
+La etiqueta presenta frecuentemente dos partes, su apertura y cierre, y se encierran ambas partes entre símbolos "menor que" y "mayor que". Lo veremos a continuación.
+
+* *Apertura*
+
+El inicio de una etiqueta se produce de la siguiente manera:
+
+<pre><b><etiqueta></b></pre>
+
+* *Cierre*
+
+El final de una etiqueta se produce de manera similar a su apertura, aunque agregando una barra:
+
+<pre><b></etiqueta></b></pre>
+
+* *Si en nuestro documento HTML escribimos una frase con el siguiente código:*
+
+**<b>Esto esta en negrita</b>**Veremos que las palabras "Esto esta en negrita" aparecen en negrita. Ya que el texto que encerramos entre una <b> que abre y otra que cierra </b> genera que la página muestre ese texto en negrita:
+
+<pre><b><b> acá ponés cualquier texto </b></b></pre>
+
+* *Otro ejemplo rápido. La etiqueta P define un párrafo. Si en nuestro documento HTML escribimos:*
+
+<pre><b><span><p>Hola, estamos en el párrafo 1</p><br/></span></b><span><b><p>Ahora hemos cambiado de párrafo</p></b></span></pre>
+
+Como resultado obtendríamos dos párrafos con esos textos. En HTML los párrafos están separados por un doble salto de línea.
+
+**Partes de un HTML**
+
+Además de todo esto, un documento HTML ha de estar delimitado por la etiqueta HTML.
+
+Dentro de este documento, podemos asimismo distinguir dos partes principales:
+
+La cabecera, delimitada por la etiqueta HEAD, donde colocaremos etiquetas de índole informativo, como por ejemplo el titulo de nuestra página. El contenido de la cabecera no suele aparecer en el cuerpo de la página, pero sirve a los navegadores y otros sistemas para encontrar información útil para entender y procesar el documento.
+
+El cuerpo, flanqueado por la etiqueta BODY, que será donde colocaremos nuestro texto e imágenes delimitados a su vez por otras etiquetas como las que hemos visto.
+
+El resultado~~~~ de un documento básico tiene la siguiente estructura:
+
+<pre><b><html><br/></b><b><head><br/></b><b><title>Mi documento básico</title><br/></b><b></head><br/></b><b><body></b><b><br/></b><b><p>Este es el cuerpo de mi primera página HTML</p><br/></b><b><p>Este segundo párrafo también forma parte del cuerpo</p></b><b><br/></b><b></body><br/></b><b></html></b></pre>
+
+***Nota***: A este documento básico le faltan todavía algunas cosas importantes que no queremos que nunca se te olviden. Sin embargo hablaremos de ellas en el siguiente artículo, dedicado a la página HTML básica.
+
+**Case Sensitive?**
+
+Otra de las cosas importantes de conocer sobre la sintaxis básica del HTML es que los saltos de línea no importan a la hora de interpretar una página. Un salto de línea será simplemente interpretado como un separador de palabras, un espacio en blanco. Es por ello que para separar líneas necesitamos usar la etiqueta de párrafo comentada antes, o la etiqueta BR que significa un salto de línea simple.
+
+<pre><pre><span>Esto es una línea.<br/></span><b><br><br/></b>Esto es otra línea<b><br></b>Esto es otra línea</pre></pre>
+
+Ahora, aunque estoy escribiendo aparentemente en otra línea, no se verá el salto de línea porque el BR no muestra algo en pantalla, sino que directamente muestra el texto en el siguiente renglón. Del código anterior obtendríamos una página que muestra:
+
+<pre>Esto es una línea.<br/>Esto es otra línea.<br/>Esto es otra línea</pre>
