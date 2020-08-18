@@ -106,6 +106,11 @@ Cada dispositivo tiene su propia dirección TCP/IP. Por lo general, el dispositi
 Podés consultar tu IP pública desde una página web como *https://www.cual-es-mi-ip.net/*
 
 Conceptualmente, el número obtenido se puede asemejar a la “dirección” de una habitación de hotel, en la que la gerencia del mismo sabe que puede encontrarlo o el número de teléfono de tu celular.
+### Preguntas
+
+**¿Qué otros protocolos además del TCP/IP existen y cuales tengo actualmente utilizados en mi compu?** 
+**¿El envío de un email puede considerarse un uso de internet?**
+**¿Qué diferencia hay entre consultar mis mails por la web de gmail.com a consultarlos desde la aplicación de celular? Se utilizan los mismos protocolos?**
 
 ## Conceptos HTML
 
@@ -248,3 +253,65 @@ Otra de las cosas importantes de conocer sobre la sintaxis básica del HTML es q
 Ahora, aunque estoy escribiendo aparentemente en otra línea, no se verá el salto de línea porque el BR no muestra algo en pantalla, sino que directamente muestra el texto en el siguiente renglón. Del código anterior obtendríamos una página que muestra:
 
 <pre>Esto es una línea.<br/>Esto es otra línea.<br/>Esto es otra línea</pre>
+
+## Tu primera pagina HTML
+**Doctype**
+Reconozco que el "doctype" no es la etiqueta más intuitiva, pero debemos mencionarla ahora porque es el inicio de cualquier archivo HTML. Viene heredada del XML, que es un lenguaje precursor del HTML. En el pasado la etiqueta Doctype era bastante más compleja, pero afortunadamente con la llegada de HTML5 se simplificó para quedar simplemente como esto:
+
+<pre><!DOCTYPE html></pre>
+
+El Doctype o “Declaración del tipo de documento” es una instrucción especial que va al inicio de nuestro documento HTML y que permite al navegador entender qué versión de HTML estamos utilizando. Esta información determinará la manera en la que el navegador procesará el documento, un DOCTYPE distinto podría implicar hasta una visualización diferente del sitio web dentro del mismo navegador.
+
+**Juego de Caracteres**
+El juego de caracteres es otro asunto que puede parecer un poco complejo, pero que tenerlo claro desde el principio te ayudará a no pasar en el futuro por diversos problemas.
+
+Este juego de caracteres, o codificación, depende del sistema operativo que estás usando para crear tu archivo HTML. Mientras que unos sistemas como Linux o Mac usan por defecto un juego de caracteres llamado UTF-8, en Windows se usa de manera predeterminada otro juego de caracteres llamado ISO-8859-1. Parece una información un tanto técnica y fuera de necesidad para introducir ahora que estamos comenzando, pero insistimos que nos ahorrará frustraciones al dar los primeros pasos, pero sobre todo en un futuro.
+
+En HTML5 el juego de caracteres a usar es siempre UTF-8. Por lo que tendremos que tener especial atención si somos usuarios de Windows, para asegurarnos que usamos la codificación correcta. Es otro de los motivos por los que en pasados artículos recomendábamos Brackets o Atom como editores de código, ya que éstos trabajan siempre en UTF-8, independientemente del sistema operativo. Si no estás usando uno de esos editores, te recomendamos hacerlo ahora y si te empeñas en trabajar con tu propio editor infórmate sobre el juego de caracteres que produce y si existe alguna opción o configuración que te asegure usar siempre UTF-8.
+
+Para definir qué juego de caracteres estamos usando en un documento HTML se tiene que escribir una etiqueta en la cabecera de la página, en el HEAD, llamada META. Realmente las etiquetas META las trataremos más adelante, porque sirven para varias cosas interesantes. Pero de momento nos aseguraremos que tenemos esta etiqueta en el head.
+
+<meta charset="UTF-8">
+Igualmente, no pretendemos hablar mucho de esta etiqueta por el momento, solo que te la tomes como un contrato a cumplir para tener un documento correcto. 
+
+A continuación tienes un documento básico con las etiquetas necesarias para comenzar con un código completo.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mi primera página</title>
+</head>
+<body>
+<p><b>Bienvenido,</b></p>
+<p>Estás en la página <b>Comida para Todos los gustos</b>.</p>
+<p>Aquí aprenderás recetas fáciles y deliciosas.</p>
+</body>
+</html>
+Puedes copiar y pegarlo en tu editor de código. Ahora guarda ese archivo con extensión .html en tu compu. Para ello accedemos al menú Archivo y seleccionamos la opción Guardar como. En la ventana elegimos el directorio donde deseamos guardarlo y colocaremos su nombre, por ejemplo ejercicio1.html
+
+Consejo: Utiliza nombres en tus archivos que tengan algunas normas básicas para ahorrarte disgustos y líos.
+
+Nuestro consejo es que no utilices acentos ni espacios ni otros caracteres raros. También te ayudará escribir siempre las letras en minúsculas.
+
+Esto no quiere decir que debes hacer nombres de archivos cortos, es mejor hacerlos descriptivos para que te aclaren lo que hay dentro. Algún caracter como el guión "-" o el guión bajo "_" te puede ayudar a separar las palabras. Por ejemplo quienes_somos.html
+
+Con el documento HTML creado, podemos ver el resultado obtenido a partir de un navegador. 
+
+Es conveniente, llegado a este punto, hacer hincapié en el hecho de que no todos los navegadores son idénticos a la hora de interpretar un documento. Desgraciadamente, los resultados de nuestro código pueden cambiar de uno a otro por lo que resulta aconsejable visualizar la página en varios clientes web. Generalmente se usan Chrome, Internet Explorer, Microsoft Edge y Firefox como referencias ya que son los más extendidos. Si usás Geany podrás probar el código haciendo click en el botón de “ejecutar” desde dentro de la aplicación. Lo que podrás ver en el video de explicación del ejercicio.
+
+Actualmente Google Chrome acapara la mayoría de usuarios y Firefox e Internet Explorer/Edge están relegados a un segundo plano. Esto no quiere decir que lo debemos dejar totalmente de lado ya que incluso una minoría que puede proporcionarnos puede resultar muy importante para nosotros.
+
+**Como ver la pagina que se hizo**
+Una vez guardado el fichero con extensión .html, para abrir la página en el navegador, simplemente tienes que acceder a la carpeta donde has guardado el archivo y darle un doble clic. Se trata de una tarea sencilla que estamos seguros que podrás realizar. Si no lo consigues, fíjate que la mayoría de los navegadores tienen un menú. En el menú de "Archivo" de tu navegador preferido encontrarás una opción como "Abrir archivo", desde donde también podrás abrir una página realizada por ti con tu editor de código.
+
+Una vez abierto el archivo podés ver tu  primera página web. Algo sencillita pero por algo se empieza. Seguramente en poco tiempo seremos capaces de mejorar sensiblemente.
+
+En la parte superior izquierda de la ventana del navegador podés comprobar la presencia del texto delimitado por la etiqueta TITLE. Esta es una de las funciones de esta etiqueta, cuyo principal cometido es el de servir de referencia en los motores de búsqueda como Google.
+
+Por otro lado, los elementos que colocamos entre la etiqueta BODY, y su cierre, se pueden ver en el espacio reservado para el cuerpo de la página.
+
+Si hacés click con el botón derecho sobre la página y elegís "Ver código fuente de la página"  o "Inspeccionar" en una ventana accesoria aparece el código de nuestro archivo HTML. Este recurso es de extremada importancia, ya que nos permite ver el tipo de técnicas empleadas por otros para la confección de sus páginas.
+
+Una vez que hicimos esta práctica podemos ya profundizar en la descripción de algunas de las etiquetas más empleadas del HTML.
+
