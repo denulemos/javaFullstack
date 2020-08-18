@@ -254,15 +254,15 @@ Ahora, aunque estoy escribiendo aparentemente en otra línea, no se verá el sal
 
 <pre>Esto es una línea.<br/>Esto es otra línea.<br/>Esto es otra línea</pre>
 
-## Tu primera pagina HTML
-**Doctype**
+## Tu primera pagina HTML.
+**Doctype.**
 Reconozco que el "doctype" no es la etiqueta más intuitiva, pero debemos mencionarla ahora porque es el inicio de cualquier archivo HTML. Viene heredada del XML, que es un lenguaje precursor del HTML. En el pasado la etiqueta Doctype era bastante más compleja, pero afortunadamente con la llegada de HTML5 se simplificó para quedar simplemente como esto:
 
 <pre><!DOCTYPE html></pre>
 
 El Doctype o “Declaración del tipo de documento” es una instrucción especial que va al inicio de nuestro documento HTML y que permite al navegador entender qué versión de HTML estamos utilizando. Esta información determinará la manera en la que el navegador procesará el documento, un DOCTYPE distinto podría implicar hasta una visualización diferente del sitio web dentro del mismo navegador.
 
-**Juego de Caracteres**
+**Juego de Caracteres.**
 El juego de caracteres es otro asunto que puede parecer un poco complejo, pero que tenerlo claro desde el principio te ayudará a no pasar en el futuro por diversos problemas.
 
 Este juego de caracteres, o codificación, depende del sistema operativo que estás usando para crear tu archivo HTML. Mientras que unos sistemas como Linux o Mac usan por defecto un juego de caracteres llamado UTF-8, en Windows se usa de manera predeterminada otro juego de caracteres llamado ISO-8859-1. Parece una información un tanto técnica y fuera de necesidad para introducir ahora que estamos comenzando, pero insistimos que nos ahorrará frustraciones al dar los primeros pasos, pero sobre todo en un futuro.
@@ -302,7 +302,7 @@ Es conveniente, llegado a este punto, hacer hincapié en el hecho de que no todo
 
 Actualmente Google Chrome acapara la mayoría de usuarios y Firefox e Internet Explorer/Edge están relegados a un segundo plano. Esto no quiere decir que lo debemos dejar totalmente de lado ya que incluso una minoría que puede proporcionarnos puede resultar muy importante para nosotros.
 
-**Como ver la pagina que se hizo**
+**Como ver la pagina que se hizo?.**
 Una vez guardado el fichero con extensión .html, para abrir la página en el navegador, simplemente tienes que acceder a la carpeta donde has guardado el archivo y darle un doble clic. Se trata de una tarea sencilla que estamos seguros que podrás realizar. Si no lo consigues, fíjate que la mayoría de los navegadores tienen un menú. En el menú de "Archivo" de tu navegador preferido encontrarás una opción como "Abrir archivo", desde donde también podrás abrir una página realizada por ti con tu editor de código.
 
 Una vez abierto el archivo podés ver tu  primera página web. Algo sencillita pero por algo se empieza. Seguramente en poco tiempo seremos capaces de mejorar sensiblemente.
@@ -314,4 +314,87 @@ Por otro lado, los elementos que colocamos entre la etiqueta BODY, y su cierre, 
 Si hacés click con el botón derecho sobre la página y elegís "Ver código fuente de la página"  o "Inspeccionar" en una ventana accesoria aparece el código de nuestro archivo HTML. Este recurso es de extremada importancia, ya que nos permite ver el tipo de técnicas empleadas por otros para la confección de sus páginas.
 
 Una vez que hicimos esta práctica podemos ya profundizar en la descripción de algunas de las etiquetas más empleadas del HTML.
+
+**Formatos de parrafos en HTML.**
+Veremos como utilizar párrafos y saltos de línea en páginas web. Incluiré también los encabezados como párrafos que sirven de titulo.
+
+En textos anteriores hemos presentado a título de ejemplo algunas etiquetas que permiten dar formato a nuestro texto. 
+
+Dar formato a un texto pasa por tareas tan evidentes como definir los párrafos, justificarlos, introducir viñetas, numeraciones o bien poner en negrita, itálica...
+
+Hemos visto que para definir los párrafos nos servimos de la etiqueta P que introduce un salto y deja una línea en blanco antes de continuar con el resto del documento.
+
+Podemos también usar la etiqueta BR, de la cual no existe su cierre correspondiente (/BR), para realizar un simple salto de linea con lo que no dejamos una renglón en blanco sino que solo nos posicionamos en el renglón siguiente.
+
+Nota: Existen otras etiquetas que no tienen su correspondiente de cierre, como IMG para las imágenes, que veremos más adelante. Esto ocurre porque un salto de línea o una imagen no empiezan y acaban más adelante sino que sólo se colocan y ya tienen su propio funcionamiento.
+
+Los párrafos delimitados por etiquetas P pueden ser fácilmente alineados a la izquierda, centro,  derecha o  justificados especificando dicha alineación en el interior de la etiqueta por medio de un atributo "align". 
+
+Un atributo, es entonces, un parámetro incluído en el interior de la etiqueta que ayuda a definir el funcionamiento de la etiqueta de una forma más personalizada. Veremos una gran cantidad de atributos muy útiles para todo tipo de etiquetas.
+
+Recordatorio: HTML se usa para definir el contenido. Por tanto, los atributos align actualmente ya no se usan en HTML, porque están definiendo la estética con la que un párrafo debe de representarse y no el contenido. Actualmente toda la definición estética se realiza bajo el código  CSS, que sirve para definir el estilo, la forma. 
+
+ Así, si deseásemos introducir un texto alineado a la izquierda escribiríamos:
+<p align="left">Texto alineado a la izquierda</p>
+ Para una justificación al centro:
+<p align="center">Texto alineado al centro</p>
+ Para alinear a la derecha:
+<p align="right">Texto alineado a la derecha</p>
+ En cada caso mencionado, el atributo align toma determinados valores que son escritos entre comillas. En algunas ocasiones necesitamos especificar algunos atributos para el correcto funcionamiento de la etiqueta. En otros casos, el propio navegador toma un valor definido por defecto. Para el caso de align, el valor por defecto es left.
+
+El atributo align no es exclusivo de la etiqueta P. Otras etiquetas muy comunes, que veremos más adelante, entre las cuales se introducen texto o imágenes, suelen hacer uso de este atributo de una forma habitual.
+
+Imaginemos un texto relativamente largo donde todos los párrafos están alineados a la izquierda (por ejemplo). Una forma de simplificar nuestro código y de evitar introducir continuamente el atributo align sobre cada una de nuestras etiquetas es utilizando la etiqueta DIV.
+
+Esta etiqueta, DIV, por si sola no sirve para nada, salvo producir un salto de línea simple. Para que realmente se vea tiene que estar acompañada de algún estilo definido en el CSS o de atributos del HTML como align y lo que nos permite es alinear cualquier elemento (párrafo o imagen) de la manera que nosotros deseemos.
+
+Así, el código:
+
+<p align="left">Parrafo1</p> 
+<p align="left"> Parrafo3</p> 
+<p align="left"> Parrafo2</p>
+es equivalente a:
+
+<div align="left"> 
+<p>Parrafo1</p> 
+<p>Parrafo2</p> 
+<p>Parrafo3</p> 
+</div>
+ Nota: No es correcto utilizar align en una etiqueta DIV, por el mismo motivo que no es correcto utilizarlo en un párrafo. 
+
+Como hemos visto, la etiqueta DIV marca divisiones en las que definimos un bloque de contenido, y a los que podríamos aplicar estilo de manera global, aunque lo correcto sería aplicar ese estilo del lado del CSS.
+
+**Encabezados.**
+Existen otras etiquetas para definir párrafos especiales, que harán las veces de títulos. Son los encabezados o headings en inglés. Como decimos, son etiquetas que formatean el texto como un titular, pero el hecho de que cambien el formato no es lo que nos tiene que preocupar, sino el significado en sí de la etiqueta. Es cierto que los navegadores asignan un tamaño mayor de letra y colocan el texto en negrita, pero lo importante es que sirven para definir la estructura del contenido de un documento HTML. Entre otras cosas, lo motores de búsqueda sabrán interpretar mejor el contenido de una página en función de los titulares y subtitulares.
+
+Hay varios tipos de encabezados, que se diferencian visualmente en el tamaño de la letra que utilizan. La etiqueta en concreto es la H1, para los encabezados más grandes, H2 para los de segundo nivel y así hasta H6 que es el encabezado más pequeño. Pero lo importante, insistimos es la estructura que denotan. Una página tendrá generalmente un encabezado de nivel 1 y dentro varios de nivel 2. Luego, dentro de los H2 encontraremos si acaso H3, etc. Nunca debemos usar los encabezados porque nos formateen el texto de una manera dada, sino porque nuestro documento lo requiera según su estructura.
+
+Los encabezados implican también una separación en párrafos, así que todo lo que escribamos dentro de H1 y su cierre (o cualquier otro encabezado) se colocará en un párrafo independiente.
+
+Podemos ver cómo se presentan algunos encabezados a continuación.
+
+<h1>Encabezado de nivel 1</h1>
+ Los encabezados, como otras etiquetas de HTML, soportan el atributo align. Vemos un ejemplo de encabezado de nivel 2 alineado al centro, aunque repetimos que este formato estético debería hacerse desde CSS.
+
+<h2 align="center">Encabezado de nivel 2</h2>
+
+
+Otro ejercicio interesante es construir una página web que contenga todos los encabezados posibles. Se puede ver a continuación.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>headings</title>
+</head>
+<body>
+  <h1>Encabezado de nivel 1</h1>
+  <h2>Encabezado de nivel 2</h2>
+  <h3>Encabezado de nivel 3</h3>
+  <h4>Encabezado de nivel 4</h4>
+  <h5>Encabezado de nivel 5</h5>
+  <h6>Encabezado de nivel 6</h6>
+</body>
+</html>
+
 
