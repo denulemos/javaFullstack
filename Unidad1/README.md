@@ -334,12 +334,6 @@ Un atributo, es entonces, un parámetro incluído en el interior de la etiqueta 
 
 Recordatorio: HTML se usa para definir el contenido. Por tanto, los atributos align actualmente ya no se usan en HTML, porque están definiendo la estética con la que un párrafo debe de representarse y no el contenido. Actualmente toda la definición estética se realiza bajo el código  CSS, que sirve para definir el estilo, la forma. 
 
- Así, si deseásemos introducir un texto alineado a la izquierda escribiríamos:
-<p align="left">Texto alineado a la izquierda</p>
- Para una justificación al centro:
-<p align="center">Texto alineado al centro</p>
- Para alinear a la derecha:
-<p align="right">Texto alineado a la derecha</p>
  En cada caso mencionado, el atributo align toma determinados valores que son escritos entre comillas. En algunas ocasiones necesitamos especificar algunos atributos para el correcto funcionamiento de la etiqueta. En otros casos, el propio navegador toma un valor definido por defecto. Para el caso de align, el valor por defecto es left.
 
 El atributo align no es exclusivo de la etiqueta P. Otras etiquetas muy comunes, que veremos más adelante, entre las cuales se introducen texto o imágenes, suelen hacer uso de este atributo de una forma habitual.
@@ -348,19 +342,6 @@ Imaginemos un texto relativamente largo donde todos los párrafos están alinead
 
 Esta etiqueta, DIV, por si sola no sirve para nada, salvo producir un salto de línea simple. Para que realmente se vea tiene que estar acompañada de algún estilo definido en el CSS o de atributos del HTML como align y lo que nos permite es alinear cualquier elemento (párrafo o imagen) de la manera que nosotros deseemos.
 
-Así, el código:
-
-<p align="left">Parrafo1</p> 
-<p align="left"> Parrafo3</p> 
-<p align="left"> Parrafo2</p>
-es equivalente a:
-
-<div align="left"> 
-<p>Parrafo1</p> 
-<p>Parrafo2</p> 
-<p>Parrafo3</p> 
-</div>
- Nota: No es correcto utilizar align en una etiqueta DIV, por el mismo motivo que no es correcto utilizarlo en un párrafo. 
 
 Como hemos visto, la etiqueta DIV marca divisiones en las que definimos un bloque de contenido, y a los que podríamos aplicar estilo de manera global, aunque lo correcto sería aplicar ese estilo del lado del CSS.
 
@@ -371,30 +352,5 @@ Hay varios tipos de encabezados, que se diferencian visualmente en el tamaño de
 
 Los encabezados implican también una separación en párrafos, así que todo lo que escribamos dentro de H1 y su cierre (o cualquier otro encabezado) se colocará en un párrafo independiente.
 
-Podemos ver cómo se presentan algunos encabezados a continuación.
-
-<h1>Encabezado de nivel 1</h1>
- Los encabezados, como otras etiquetas de HTML, soportan el atributo align. Vemos un ejemplo de encabezado de nivel 2 alineado al centro, aunque repetimos que este formato estético debería hacerse desde CSS.
-
-<h2 align="center">Encabezado de nivel 2</h2>
-
-
-Otro ejercicio interesante es construir una página web que contenga todos los encabezados posibles. Se puede ver a continuación.
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>headings</title>
-</head>
-<body>
-  <h1>Encabezado de nivel 1</h1>
-  <h2>Encabezado de nivel 2</h2>
-  <h3>Encabezado de nivel 3</h3>
-  <h4>Encabezado de nivel 4</h4>
-  <h5>Encabezado de nivel 5</h5>
-  <h6>Encabezado de nivel 6</h6>
-</body>
-</html>
 
 
