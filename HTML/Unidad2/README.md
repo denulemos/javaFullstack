@@ -158,10 +158,6 @@ En el video de esta sección vamos a colocar esta imagen que obtenés del siguie
 
 Y te invito a practicar a vos tambié en tu casa. Para trabajar con una imagen vamos a colocarla en la misma carpeta donde está el HTML que vamos a trabajar. Más adelante también hablaremos sobre cómo acceder a otros archivos que están en otras carpetas, mediante la composición de rutas un poco más complejas que harán más prolijo el ambiente de trabajo, pero por el momento suponemos que la imagen se encuentra en el mismo directorio que la página.
 
-Para colocar esta imagen como fondo de mosaico, se escribiría la siguiente etiqueta BODY.
-
-<pre> <body background="fondo.jpg"></pre>
-
 *Recomendación*: Siempre que coloques una imagen de fondo, debemos poner también un color de fondo cercano al color de la imagen.
 
 Esto se debe a que, al colocar una imagen de fondo, el texto de la página debemos colocarlo en un color que contraste suficientemente con dicho fondo. Si el visitante no puede ver el fondo, puede que el texto no contraste lo suficiente con el color de fondo por defecto de la web.
@@ -182,9 +178,7 @@ Además del color del texto, tenemos tres atributos para asignar el color de los
 
 **Ejemplo de color del texto**
 
-Si a una página le vamos a poner el color de fondo sea negro, y los colores del texto y los enlaces sean claros. Pondremos el color de texto blanco y los enlaces amarillos, más resaltados los que no estén visitados y menos resaltados lo que ya están visitados. Para ello escribiríamos la etiqueta BODY así:
-
-<pre> <body bgcolor="#000000" text="#ffffff" link="#ffff33" alink="#ffffcc" vlink="ffff00"></pre><pre> <body bgcolor="#000000" text="#ffffff" link="#ffff33" alink="#ffffcc" vlink="ffff00"></pre>
+Si a una página le vamos a poner el color de fondo sea negro, y los colores del texto y los enlaces sean claros. Pondremos el color de texto blanco y los enlaces amarillos, más resaltados los que no estén visitados y menos resaltados lo que ya están visitados. 
 
 ##### **Márgenes**
 
