@@ -58,3 +58,54 @@ CSS
     content: 'Editor: ';
 }
 ````
+
+* **contenteditable**
+
+Es un atributo enumerado que indica si el elemento puede ser modificable por el usuario. Si es así, el navegador modifica el elemento para permitir la edición.
+
+El atributo debe tener uno de los siguientes valores:
+
+* true o un valor vacío, el cual indica que el elemento debe ser editable.
+* false, el cual indica que el elemento no debe ser editable.
+
+Nota: content: '\201C'; y content: '\201D'; se refiere a las dobles comillas.
+
+````
+
+<p>Edite el contenido de este texto</p>
+
+</blockquote>
+ <cite contenteditable="true">-- Puede escribir algo aquí</cite>
+
+CSS
+.output {
+font: 1rem 'Fira Sans', sans-serif;
+}
+blockquote {
+background: #eee;
+border-radius: 5px;
+margin: 16px 0;
+}
+blockquote p {
+padding: 15px;
+}
+cite {
+margin: 16px 32px;
+}
+blockquote p::before {
+content: '\201C';
+}
+blockquote p::after {
+content: '\201D';
+}
+[contenteditable='true'] {
+caret-color: red;
+}
+
+````
+
+* **data***-
+
+Son atributos globales que forman una clase denominados atributos de datos personalizados , y que se caracterizan por permitir intercambiar información entre el HTML en el momento de la carga del archivo HTML.
+
+~~~~
