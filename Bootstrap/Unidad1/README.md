@@ -16,7 +16,7 @@ Los archivos CSS de Bootstrap
 
 Usando el servicio de BootstrapCDN, puedes incluir Bootstrap en tus proyectos añadiendo la siguiente línea en todas tus páginas:
 
-```
+```html
 <head>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -36,7 +36,7 @@ Muchos de los componentes de Bootstrap requieren JavaScript para funcionar. En c
 
 Aunque recomendamos el uso de jQuery's Slim, la versión completa de jQuery también funciona:
 
-```
+```html
 <!-- Optional JavaScript -->
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -66,7 +66,7 @@ Antes de utilizar Bootstrap, asegúrate de que tus páginas están preparadas pa
 
 En resumen, la estructura básica de tus páginas debería ser:
 
-```
+```html
 <!doctype html>
 
 <html lang="en">
@@ -243,7 +243,7 @@ El sistema de cuadrícula de Bootstrap utiliza una serie de contenedores, filas 
 
 A continuación se muestra un ejemplo y una mirada en profundidad de cómo se utiliza la cuadrícula.
 
-**El sigu****iente detalle saldrá del código a continuación:**
+**El siguiente detalle saldrá del código a continuación:**
 
 | Una de tres columnas | Una de tres columnas | Una de tres columnas |
 | - | - | - |
@@ -251,7 +251,7 @@ A continuación se muestra un ejemplo y una mirada en profundidad de cómo se ut
 Código
 
 ```
-<pre>&lt;div class=&#34;container&#34;&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col-sm&#34;&gt;<br/>      Una de tres columnas<br/>&lt;/div&gt;<br/>&lt;div class=&#34;col-sm&#34;&gt;<br/>      Una de tres columnas<br/>&lt;/div&gt;<br/>&lt;div class=&#34;col-sm&#34;&gt;<br/>      Una de tres columnas<br/>&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+<pre><div class="container"><br/><div class="row"><br/><div class="col-sm"><br/>      Una de tres columnas<br/></div><br/><div class="col-sm"><br/>      Una de tres columnas<br/></div><br/><div class="col-sm"><br/>      Una de tres columnas<br/></div><br/></div><br/></div></pre>
 ```
 
 El ejemplo anterior crea tres columnas de igual ancho en dispositivos pequeños, medianos, grandes y extra grandes utilizando nuestras clases de cuadrícula predefinidas. Esas columnas están centradas en la página con la clase padre .container.
@@ -272,23 +272,20 @@ Podés usar clases de cuadrícula predefinidas (como .col-4) o mixins de Sass pa
 
 Hay que tener en cuenta que existen limitaciones y en[ ](https://github.com/philipwalton/flexbugs)flexbox , como la imposibilidad de utilizar algunos elementos HTML como contenedores flexibles .
 
-
 #### **Opciones de cuadrícula**
 
 Mientras Bootstrap usa em o rem para definir la mayoría de tamaños, px se usan para puntos de interrupción de cuadrícula y anchos de contenedor. Esto se debe a que el ancho de la ventana gráfica está en píxeles y no cambia con el tamaño de fuente .
 
 Vea cómo funcionan los aspectos del sistema de cuadrícula Bootstrap en múltiples dispositivos con una práctica tabla.
 
-|   | **Extra pequeño********<576px** | **Pequeño********≥****576px** | **Medio********≥****768px** | **Grande********≥****992px** | **Extra grande********≥****1200px** |
+|   | Extra pequeño<576px> | **Pequeño 576px** | **Medio 768px** | **Grande 992px** | **Extra grande 1200px** |
 | - | - | - | - | - | - |
 | **Ancho máximo del contenedor** | Ninguno (automático) | 540 px | 720px | 960 px | 1140 px |
 | **Prefijo de clase** | .col-xs | .col-sm- | .col-md- | .col-lg- | .col-xl- |
-| **# de columnas** | 12 |
-| **Ancho de canal (márgenes)** | 30px (15px a cada lado de una columna) |
-| **Pueden encastrarse columnas** | si |
-| **Orden de columnas** | si |
-
-
+| **# de columnas** | 12 |   |   |   |   |
+| **Ancho de canal (márgenes)** | 30px (15px a cada lado de una columna) |   |   |   |   |
+| **Pueden encastrarse columnas** | si |   |   |   |   |
+| **Orden de columnas** | si |   |   |   |   |
 
 #### **Columnas de diseño automático**
 
@@ -307,9 +304,8 @@ Por ejemplo, aquí hay dos diseños de cuadrícula que se aplican a todos los di
 Código:
 
 ```
-<pre> &lt;div class=&#34;container&#34;&gt;<br/>  &lt;div class=&#34;row&#34;&gt;<br/>    &lt;div class=&#34;col&#34;&gt;<br/>      1 de 2<br/>    &lt;/div&gt;<br/>    &lt;div class=&#34;col&#34;&gt;<br/>      2 de 2<br/>    &lt;/div&gt;<br/>  &lt;/div&gt;<br/>  &lt;div class=&#34;row&#34;&gt;<br/>    &lt;div class=&#34;col&#34;&gt;<br/>      1 de 3<br/>    &lt;/div&gt;<br/>    &lt;div class=&#34;col&#34;&gt;<br/>      2 de 3<br/>    &lt;/div&gt;<br/>    &lt;div class=&#34;col&#34;&gt;<br/>      3 de 3<br/>    &lt;/div&gt;<br/>  &lt;/div&gt;<br/>&lt;/div&gt;</pre>
+<pre> <div class="container"><br/>  <div class="row"><br/>    <div class="col"><br/>      1 de 2<br/>    </div><br/>    <div class="col"><br/>      2 de 2<br/>    </div><br/>  </div><br/>  <div class="row"><br/>    <div class="col"><br/>      1 de 3<br/>    </div><br/>    <div class="col"><br/>      2 de 3<br/>    </div><br/>    <div class="col"><br/>      3 de 3<br/>    </div><br/>  </div><br/></div></pre>
 ```
-
 
 ##### **Multilínea de igual ancho**
 
@@ -328,11 +324,13 @@ Hubo un error en Safari flexbox que impidió que esto funcionara sin un explíci
 
 Código
 
-<pre>&lt;div class=&#34;container&#34;&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col&#34;&gt;col&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;col&lt;/div&gt;<br/>&lt;div class=&#34;w-100&#34;&gt;espacio&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;col&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;col&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+```
+<pre><div class="container"><br/><div class="row"><br/><div class="col">col</div><br/><div class="col">col</div><br/><div class="w-100">espacio</div><br/><div class="col">col</div><br/><div class="col">col</div><br/></div><br/></div></pre>
+```
 
-##### **
 
-**
+
+##### 
 
 ##### **Establecer un ancho de columna**
 
@@ -346,73 +344,71 @@ El diseño automático de las columnas de la cuadrícula de flexbox también sig
 
 Código
 
-<pre>&lt;div class=&#34;container&#34;&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col&#34;&gt;<br/>1 de 3<br/>&lt;/div&gt;<br/>&lt;div class=&#34;col-6&#34;&gt;<br/>2 de 3 (6 col)<br/>&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;<br/>3 de 3<br/>&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col&#34;&gt;<br/>1 de 3<br/>&lt;/div&gt;<br/>&lt;div class=&#34;col-5&#34;&gt;<br/>2 de 3 (5 col)<br/>&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;<br/>3 de 3<br/>&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+```
+<pre><div class="container"><br/><div class="row"><br/><div class="col"><br/>1 de 3<br/></div><br/><div class="col-6"><br/>2 de 3 (6 col)<br/></div><br/><div class="col"><br/>3 de 3<br/></div><br/></div><br/><div class="row"><br/><div class="col"><br/>1 de 3<br/></div><br/><div class="col-5"><br/>2 de 3 (5 col)<br/></div><br/><div class="col"><br/>3 de 3<br/></div><br/></div><br/></div></pre>
+```
 
-##### **
 
-**
 
 ##### **Contenido de ancho variable**
 
 Use col-{breakpoint}-autoclases para dimensionar columnas según el ancho natural de su contenido.
 
-![](https://aulasvirtuales.bue.edu.ar/pluginfile.php/111732/mod_lesson/page_contents/372/image1.png)
-
 Código
 
-<pre>&lt;div class=&#34;container&#34;&gt;<br/>&lt;div class=&#34;row justify-content-md-center&#34;&gt;<br/>&lt;div class=&#34;col col-lg-2&#34;&gt;<br/>1 of 3<br/>&lt;/div&gt;<br/>&lt;div class=&#34;col-md-auto&#34;&gt;<br/>Variable width content<br/>&lt;/div&gt;<br/>&lt;div class=&#34;col col-lg-2&#34;&gt;<br/>3 of 3<br/>&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col&#34;&gt;<br/>1 of 3<br/>&lt;/div&gt;<br/>&lt;div class=&#34;col-md-auto&#34;&gt;<br/>Variable width content<br/>&lt;/div&gt;<br/>&lt;div class=&#34;col col-lg-2&#34;&gt;<br/>3 of 3<br/>&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+```
+<pre><div class="container"><br/><div class="row justify-content-md-center"><br/><div class="col col-lg-2"><br/>1 of 3<br/></div><br/><div class="col-md-auto"><br/>Variable width content<br/></div><br/><div class="col col-lg-2"><br/>3 of 3<br/></div><br/></div><br/><div class="row"><br/><div class="col"><br/>1 of 3<br/></div><br/><div class="col-md-auto"><br/>Variable width content<br/></div><br/><div class="col col-lg-2"><br/>3 of 3<br/></div><br/></div><br/></div></pre>
+```
 
-#### **
 
-**
+
+#### 
 
 #### **Clases **responsivas
 
 La cuadrícula de Bootstrap incluye cinco niveles de clases predefinidas para crear diseños complejos de respuesta. Personalice el tamaño de sus columnas en dispositivos extra pequeños, pequeños, medianos, grandes o extra grandes como mejor le parezca.
 
-##### **
-
-**
+##### 
 
 ##### **Todos los puntos de interrupción**
 
 Para cuadrículas que son iguales desde el dispositivo más pequeño al más grande, use las clases .col y .col-*. Especifique una clase numerada cuando necesite una columna de tamaño especial; de lo contrario, no dude en seguir .col.
 
-![](https://aulasvirtuales.bue.edu.ar/pluginfile.php/111732/mod_lesson/page_contents/372/image2.png)
-
 Código
 
-<pre>&lt;div class=&#34;container&#34;&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col&#34;&gt;col&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;col&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;col&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;col&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col-8&#34;&gt;col-8&lt;/div&gt;<br/>&lt;div class=&#34;col-4&#34;&gt;col-4&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+```
+<pre><div class="container"><br/><div class="row"><br/><div class="col">col</div><br/><div class="col">col</div><br/><div class="col">col</div><br/><div class="col">col</div><br/></div><br/><div class="row"><br/><div class="col-8">col-8</div><br/><div class="col-4">col-4</div><br/></div><br/></div></pre>
+```
 
-##### **
 
-**
+
+##### 
 
 ##### **Apilado a horizontal**
 
 Con un solo conjunto de .col-sm-*clases, podés crear un sistema de cuadrícula básico que comienza apilado y se vuelve horizontal en el pequeño punto de interrupción ( sm).
 
-![](https://aulasvirtuales.bue.edu.ar/pluginfile.php/111732/mod_lesson/page_contents/372/image3.png)
-
 Código
 
-<pre>&lt;div class=&#34;container&#34;&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col-sm-8&#34;&gt;col-sm-8&lt;/div&gt;<br/>&lt;div class=&#34;col-sm-4&#34;&gt;col-sm-4&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col-sm&#34;&gt;col-sm&lt;/div&gt;<br/>&lt;div class=&#34;col-sm&#34;&gt;col-sm&lt;/div&gt;<br/>&lt;div class=&#34;col-sm&#34;&gt;col-sm&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+```
+<pre><div class="container"><br/><div class="row"><br/><div class="col-sm-8">col-sm-8</div><br/><div class="col-sm-4">col-sm-4</div><br/></div><br/><div class="row"><br/><div class="col-sm">col-sm</div><br/><div class="col-sm">col-sm</div><br/><div class="col-sm">col-sm</div><br/></div><br/></div></pre>
+```
 
-##### **
 
-**
+
+##### 
 
 ##### **Mezclar y combinar**
 
 Para que las columnas simplemente se apilen en algunos niveles de cuadrícula podemos utilizar una combinación de diferentes clases para cada nivel según sea necesario. Vea el ejemplo a continuación para tener una mejor idea de cómo funciona todo.
 
-![](https://aulasvirtuales.bue.edu.ar/pluginfile.php/111732/mod_lesson/page_contents/372/image4.png)
-
 Código
 
-<pre>&lt;div class=&#34;container&#34;&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col-md-8&#34;&gt;.col-md-8&lt;/div&gt;<br/>&lt;div class=&#34;col-6 col-md-4&#34;&gt;.col-6 .col-md-4&lt;/div&gt;<br/>&lt;/div&gt;<br/> <br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col-6 col-md-4&#34;&gt;.col-6 .col-md-4&lt;/div&gt;<br/>&lt;div class=&#34;col-6 col-md-4&#34;&gt;.col-6 .col-md-4&lt;/div&gt;<br/>&lt;div class=&#34;col-6 col-md-4&#34;&gt;.col-6 .col-md-4&lt;/div&gt;<br/>&lt;/div&gt;<br/> <br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col-6&#34;&gt;.col-6&lt;/div&gt;<br/>&lt;div class=&#34;col-6&#34;&gt;.col-6&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+```
+<pre><div class="container"><br/><div class="row"><br/><div class="col">col</div><br/><div class="col">col</div><br/><div class="col">col</div><br/><div class="col">col</div><br/></div><br/><div class="row"><br/><div class="col-8">col-8</div><br/><div class="col-4">col-4</div><br/></div><br/></div></pre>
+```
 
-#####
+
 
 ##### Paddings
 
@@ -420,11 +416,13 @@ Los paddings se pueden ajustar de manera responsive mediante el relleno específ
 
 Aquí hay un ejemplo de cómo personalizar la cuadrícula Bootstrap en el lg punto de interrupción. Hemos aumentado el .col acolchado con .px-lg-5, lo hemos contrarrestado con .mx-lg-n5 en el padre .row y luego hemos ajustado el .container con .px-lg-5.
 
-![](https://aulasvirtuales.bue.edu.ar/pluginfile.php/111732/mod_lesson/page_contents/372/image5.png)
-
 Código
 
-<pre>&lt;div class=&#34;container px-lg-5&#34;&gt;<br/>&lt;div class=&#34;row mx-lg-n5&#34;&gt;<br/>&lt;div class=&#34;col py-3 px-lg-5 border bg-light&#34;&gt;Custom column padding&lt;/div&gt;<br/>&lt;div class=&#34;col py-3 px-lg-5 border bg-light&#34;&gt;Custom column padding&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+```
+<pre><div class="container px-lg-5"><br/><div class="row mx-lg-n5"><br/><div class="col py-3 px-lg-5 border bg-light">Custom column padding</div><br/><div class="col py-3 px-lg-5 border bg-light">Custom column padding</div><br/></div><br/></div></pre>
+```
+
+
 
 ##### Row-Cols
 
@@ -432,7 +430,11 @@ Utilizar las .row-cols-* clases responsives para establecer rápidamente la cant
 
 Utilizar estas clases de filas y columnas para crear rápidamente diseños de cuadrícula básicos o para controlar los diseños de tus tarjetas.
 
-<pre>&lt;div class=&#34;container&#34;&gt;<br/>&lt;div class=&#34;row row-cols-2&#34;&gt;<br/>&lt;div class=&#34;col&#34;&gt;Column&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;Column&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;Column&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;Column&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;<br/> &lt;div class=&#34;container&#34;&gt;<br/>&lt;div class=&#34;row row-cols-3&#34;&gt;<br/>&lt;div class=&#34;col&#34;&gt;Column&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;Column&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;Column&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;Column&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;<br/> &lt;div class=&#34;container&#34;&gt;<br/>&lt;div class=&#34;row row-cols-4&#34;&gt;<br/>&lt;div class=&#34;col&#34;&gt;Column&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;Column&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;Column&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;Column&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;<br/> &lt;div class=&#34;container&#34;&gt;<br/>&lt;div class=&#34;row row-cols-4&#34;&gt;<br/>&lt;div class=&#34;col&#34;&gt;Column&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;Column&lt;/div&gt;<br/>&lt;div class=&#34;col-6&#34;&gt;Column&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;Column&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;<br/> &lt;div class=&#34;container&#34;&gt;<br/>&lt;div class=&#34;row row-cols-1 row-cols-sm-2 row-cols-md-4&#34;&gt;<br/>&lt;div class=&#34;col&#34;&gt;Column&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;Column&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;Column&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;Column&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+```
+<pre><div class="container"><br/><div class="row row-cols-2"><br/><div class="col">Column</div><br/><div class="col">Column</div><br/><div class="col">Column</div><br/><div class="col">Column</div><br/></div><br/></div><br/> <div class="container"><br/><div class="row row-cols-3"><br/><div class="col">Column</div><br/><div class="col">Column</div><br/><div class="col">Column</div><br/><div class="col">Column</div><br/></div><br/></div><br/> <div class="container"><br/><div class="row row-cols-4"><br/><div class="col">Column</div><br/><div class="col">Column</div><br/><div class="col">Column</div><br/><div class="col">Column</div><br/></div><br/></div><br/> <div class="container"><br/><div class="row row-cols-4"><br/><div class="col">Column</div><br/><div class="col">Column</div><br/><div class="col-6">Column</div><br/><div class="col">Column</div><br/></div><br/></div><br/> <div class="container"><br/><div class="row row-cols-1 row-cols-sm-2 row-cols-md-4"><br/><div class="col">Column</div><br/><div class="col">Column</div><br/><div class="col">Column</div><br/><div class="col">Column</div><br/></div><br/></div></pre>
+```
+
+
 
 ##### Bordes y Estilos
 
@@ -444,97 +446,127 @@ Deja a la clase superior.container o.container-fluid implica la no anulación de
 
 Tené en cuenta que se puede seguir usando esto con todas las demás clases de cuadrícula predefinidas (incluidos los anchos de columna, los niveles de respuesta, los reordenamientos y más).
 
-<pre>&lt;div class=&#34;row no-gutters&#34;&gt;<br/>&lt;div class=&#34;col-sm-6 col-md-8&#34;&gt;.col-sm-6 .col-md-8&lt;/div&gt;<br/>&lt;div class=&#34;col-6 col-md-4&#34;&gt;.col-6 .col-md-4&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+```
+<pre><div class="row no-gutters"><br/><div class="col-sm-6 col-md-8">.col-sm-6 .col-md-8</div><br/><div class="col-6 col-md-4">.col-6 .col-md-4</div><br/></div></pre>
+```
 
-##### **
 
-**
+
+##### 
+
+```
+<pre><div class="example-container"><br/><div class="example-row"><br/><div class="example-content-main">Main content</div><br/><div class="example-content-secondary">Secondary content</div><br/></div><br/></div></pre>
+```
+
+
 
 ##### **Envoltura de columna**
 
 Si se colocan más de 12 columnas en una sola fila, cada grupo de columnas adicionales, como una unidad, se ajustará a una nueva línea.
 
-<pre>&lt;div class=&#34;container&#34;&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col-9&#34;&gt;.col-9&lt;/div&gt;<br/>&lt;div class=&#34;col-4&#34;&gt;.col-4&lt;br&gt;Since 9 + 4 = 13 &amp;gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.&lt;/div&gt;<br/>&lt;div class=&#34;col-6&#34;&gt;.col-6&lt;br&gt;Subsequent columns continue along the new line.&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+```
+<pre><div class="container"><br/><div class="row"><br/><div class="col-9">.col-9</div><br/><div class="col-4">.col-4<br>Since 9 + 4 = 13 > 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div><br/><div class="col-6">.col-6<br>Subsequent columns continue along the new line.</div><br/></div><br/></div></pre>
+```
 
-##### **
 
-**
+
+##### 
 
 ##### **Saltos de columna**
 
 Romper columnas a una nueva línea en flexbox requiere un pequeño truco: agregá un elemento width: 100% donde quieras que desees ajustar tus columnas a una nueva línea. Normalmente, esto se logra con varios .row , pero no todos los métodos de implementación pueden dar cuenta de esto.
 
-<pre> &lt;div class=&#34;container&#34;&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col-6 col-sm-3&#34;&gt;.col-6 .col-sm-3&lt;/div&gt;<br/>&lt;div class=&#34;col-6 col-sm-3&#34;&gt;.col-6 .col-sm-3&lt;/div&gt;<br/> &lt;!-- Force next columns to break to new line --&gt;<br/>&lt;div class=&#34;w-100&#34;&gt;&lt;/div&gt;<br/>&lt;div class=&#34;col-6 col-sm-3&#34;&gt;.col-6 .col-sm-3&lt;/div&gt;<br/>&lt;div class=&#34;col-6 col-sm-3&#34;&gt;.col-6 .col-sm-3&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+```
+<pre> <div class="container"><br/><div class="row"><br/><div class="col-6 col-sm-3">.col-6 .col-sm-3</div><br/><div class="col-6 col-sm-3">.col-6 .col-sm-3</div><br/> <!-- Force next columns to break to new line --><br/><div class="w-100"></div><br/><div class="col-6 col-sm-3">.col-6 .col-sm-3</div><br/><div class="col-6 col-sm-3">.col-6 .col-sm-3</div><br/></div><br/></div></pre>
+```
+
+
 
 También podés aplicar esta interrupción en puntos de interrupción específicos con nuestras utilidades de pantalla responsive .
 
-<pre> &lt;div class=&#34;container&#34;&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col-6 col-sm-4&#34;&gt;.col-6 .col-sm-4&lt;/div&gt;<br/>&lt;div class=&#34;col-6 col-sm-4&#34;&gt;.col-6 .col-sm-4&lt;/div&gt;<br/>&lt;!-- Force next columns to break to new line at md breakpoint and up --&gt;<br/>&lt;div class=&#34;w-100 d-none d-md-block&#34;&gt;&lt;/div&gt;<br/>&lt;div class=&#34;col-6 col-sm-4&#34;&gt;.col-6 .col-sm-4&lt;/div&gt;<br/>&lt;div class=&#34;col-6 col-sm-4&#34;&gt;.col-6 .col-sm-4&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+```
+<pre> <div class="container"><br/><div class="row"><br/><div class="col-6 col-sm-4">.col-6 .col-sm-4</div><br/><div class="col-6 col-sm-4">.col-6 .col-sm-4</div><br/><!-- Force next columns to break to new line at md breakpoint and up --><br/><div class="w-100 d-none d-md-block"></div><br/><div class="col-6 col-sm-4">.col-6 .col-sm-4</div><br/><div class="col-6 col-sm-4">.col-6 .col-sm-4</div><br/></div><br/></div></pre>
+```
 
-#### **
 
-**
+
+#### 
 
 #### **Reordenación**
 
-##### **
-
-**
+##### 
 
 ##### **Clases de pedidos**
 
 Utilice .order-classes para controlar el **orden visual** de su contenido. Estas clases responden, por lo que puede establecer el orderpunto de interrupción (por ejemplo, .order-1.order-md-2). Incluye soporte para 1a través 12a través de todos los cinco niveles de la red.
 
-<pre> &lt;div class=&#34;container&#34;&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col&#34;&gt;<br/>First in DOM, no order applied<br/>&lt;/div&gt;<br/>&lt;div class=&#34;col order-12&#34;&gt;<br/>Second in DOM, with a larger order<br/>&lt;/div&gt;<br/>&lt;div class=&#34;col order-1&#34;&gt;<br/>Third in DOM, with an order of 1<br/>&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+```
+<pre> <div class="container"><br/><div class="row"><br/><div class="col"><br/>First in DOM, no order applied<br/></div><br/><div class="col order-12"><br/>Second in DOM, with a larger order<br/></div><br/><div class="col order-1"><br/>Third in DOM, with an order of 1<br/></div><br/></div><br/></div></pre>
+```
+
+
 
 También hay clases responsive .order-firsty .order-lastque cambian el valor orderde un elemento aplicando order: -1y order: 13( order: $columns + 1), respectivamente. Estas clases también se pueden mezclar con las .order-*clases numeradas según sea necesario.
 
-<pre> &lt;div class=&#34;container&#34;&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col order-last&#34;&gt;<br/>First in DOM, ordered last<br/>&lt;/div&gt;<br/>&lt;div class=&#34;col&#34;&gt;<br/>Second in DOM, unordered<br/>&lt;/div&gt;<br/>&lt;div class=&#34;col order-first&#34;&gt;<br/>Third in DOM, ordered first<br/>&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+```
+<pre> <div class="container"><br/><div class="row"><br/><div class="col order-last"><br/>First in DOM, ordered last<br/></div><br/><div class="col"><br/>Second in DOM, unordered<br/></div><br/><div class="col order-first"><br/>Third in DOM, ordered first<br/></div><br/></div><br/></div></pre>
+```
 
-##### **
 
-**
+
+##### 
 
 ##### **Desplazamiento de columnas**
 
 Podés compensar las columnas de la cuadrícula de dos formas: nuestras .offset-classes de cuadrícula responsives y nuestras utilidades de margen . Las clases de cuadrícula se dimensionan para coincidir con las columnas, mientras que los márgenes son más útiles para diseños rápidos donde el ancho del desplazamiento es variable.
 
-###### **Clases**** de compensación**
+###### **Clases de compensación**
 
 Mover las columnas a la derecha usando .offset-md-* classes. Estas clases aumentan el margen izquierdo de una columna por * columnas. Por ejemplo, se .offset-md-4 mueve .col-md-4 sobre cuatro columnas.
 
-<pre>&lt;div class=&#34;container&#34;&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col-md-4&#34;&gt;.col-md-4&lt;/div&gt;<br/>&lt;div class=&#34;col-md-4 offset-md-4&#34;&gt;.col-md-4 .offset-md-4&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col-md-3 offset-md-3&#34;&gt;.col-md-3 .offset-md-3&lt;/div&gt;<br/>&lt;div class=&#34;col-md-3 offset-md-3&#34;&gt;.col-md-3 .offset-md-3&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col-md-6 offset-md-3&#34;&gt;.col-md-6 .offset-md-3&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+```
+<pre><div class="container"><br/><div class="row"><br/><div class="col-md-4">.col-md-4</div><br/><div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div><br/></div><br/><div class="row"><br/><div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div><br/><div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div><br/></div><br/><div class="row"><br/><div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div><br/></div><br/></div></pre>
+```
+
+
 
 Además de la limpieza de columnas en los puntos de interrupción de respuesta, es posible que deba restablecer las compensaciones. Podés ver esto en el ejemplo siguiente.
 
-<pre>&lt;div class=&#34;container&#34;&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col-sm-5 col-md-6&#34;&gt;.col-sm-5 .col-md-6&lt;/div&gt;<br/>&lt;div class=&#34;col-sm-5 offset-sm-2 col-md-6 offset-md-0&#34;&gt;.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col-sm-6 col-md-5 col-lg-6&#34;&gt;.col-sm-6 .col-md-5 .col-lg-6&lt;/div&gt;<br/>&lt;div class=&#34;col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0&#34;&gt;.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+ ```
+<pre><div class="container"><br/><div class="row"><br/><div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div><br/><div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div><br/></div><br/><div class="row"><br/><div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div><br/><div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0</div><br/></div><br/></div></pre>
+ ```
+
+
 
 ##### Utilidades de margen
 
 Con el cambio a flexbox en v4, podés usar utilidades de margen, como .mr-auto y forzar a las columnas hermanas a separarse unas de otras.
 
-<pre> &lt;div class=&#34;container&#34;&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col-md-4&#34;&gt;.col-md-4&lt;/div&gt;<br/>&lt;div class=&#34;col-md-4 ml-auto&#34;&gt;.col-md-4 .ml-auto&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col-md-3 ml-md-auto&#34;&gt;.col-md-3 .ml-md-auto&lt;/div&gt;<br/>&lt;div class=&#34;col-md-3 ml-md-auto&#34;&gt;.col-md-3 .ml-md-auto&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col-auto mr-auto&#34;&gt;.col-auto .mr-auto&lt;/div&gt;<br/>&lt;div class=&#34;col-auto&#34;&gt;.col-auto&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+```
+<pre> <div class="container"><br/><div class="row"><br/><div class="col-md-4">.col-md-4</div><br/><div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div><br/></div><br/><div class="row"><br/><div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div><br/><div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div><br/></div><br/><div class="row"><br/><div class="col-auto mr-auto">.col-auto .mr-auto</div><br/><div class="col-auto">.col-auto</div><br/></div><br/></div></pre>
+```
 
-#### **
 
-**
+
+#### 
 
 #### **Anidamiento**
 
 Para anidar su contenido con la cuadrícula predeterminada, agregue un nuevo .row conjunto de .col-sm-* columnas dentro de una .col-sm-* columna existente . Las filas anidadas deben incluir un conjunto de columnas que sumen 12 o menos (no es necesario que utilice las 12 columnas disponibles).
 
-<pre>&lt;div class=&#34;container&#34;&gt;<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col-sm-9&#34;&gt;<br/>Level 1: .col-sm-9<br/>&lt;div class=&#34;row&#34;&gt;<br/>&lt;div class=&#34;col-8 col-sm-6&#34;&gt;<br/>Level 2: .col-8 .col-sm-6<br/>&lt;/div&gt;<br/>&lt;div class=&#34;col-4 col-sm-6&#34;&gt;<br/>Level 2: .col-4 .col-sm-6<br/>&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+```
+<pre><div class="container"><br/><div class="row"><br/><div class="col-sm-9"><br/>Level 1: .col-sm-9<br/><div class="row"><br/><div class="col-8 col-sm-6"><br/>Level 2: .col-8 .col-sm-6<br/></div><br/><div class="col-4 col-sm-6"><br/>Level 2: .col-4 .col-sm-6<br/></div><br/></div><br/></div><br/></div><br/></div></pre>
+```
 
-#### **
 
-**
+
+
 
 #### **Mixins de Sass**
 
 Al usar los archivos Sass de origen de Bootstrap, tenés la opción de usar variables y mixins de Sass para crear diseños de página personalizados, semánticos y receptivos. Nuestras clases de cuadrícula predefinidas utilizan estas mismas variables y combinaciones para proporcionar un conjunto completo de clases listas para usar para diseños de respuesta rápida.
 
-##### **
-
-**
+##### 
 
 ##### **Variables**
 
@@ -542,9 +574,7 @@ Las variables y los mapas determinan el número de columnas, el ancho del margen
 
 <pre>$grid-columns:      12;<br/>$grid-gutter-width: 30px;<br/>$grid-breakpoints: (<br/>// Extra small screen / phone<br/>xs: 0,<br/>// Small screen / phone<br/>sm: 576px,<br/>// Medium screen / tablet<br/>md: 768px,<br/>// Large screen / desktop<br/>lg: 992px,<br/>// Extra large screen / wide desktop<br/>xl: 1200px<br/>);<br/>$container-max-widths: (<br/>sm: 540px,<br/>md: 720px,<br/>lg: 960px,<br/>xl: 1140px<br/>);</pre>
 
-##### **
-
-**
+##### 
 
 ##### **Mixins**
 
@@ -554,9 +584,7 @@ Código
 
 <pre>// Creates a wrapper for a series of columns<br/>@include make-row();<br/>// Make the element grid-ready (applying everything but the width)<br/>@include make-col-ready();<br/>@include make-col($size, $columns: $grid-columns);<br/>// Get fancy by offsetting, or changing the sort order<br/>@include make-col-offset($size, $columns: $grid-columns);</pre>
 
-##### **
-
-**
+##### 
 
 ##### **Uso de ejemplo**
 
@@ -566,19 +594,17 @@ Podés modificar las variables a sus propios valores personalizados, o simplemen
 
 Otro ejemplo sería:
 
-<pre>&lt;div class=&#34;example-container&#34;&gt;<br/>&lt;div class=&#34;example-row&#34;&gt;<br/>&lt;div class=&#34;example-content-main&#34;&gt;Main content&lt;/div&gt;<br/>&lt;div class=&#34;example-content-secondary&#34;&gt;Secondary content&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;/div&gt;</pre>
+```
+<pre><div class="example-container"><br/><div class="example-row"><br/><div class="example-content-main">Main content</div><br/><div class="example-content-secondary">Secondary content</div><br/></div><br/></div></pre>
+```
 
-#### **
 
-**
 
 #### **Personalizando la cuadrícula**
 
 Utilizando nuestras variables y mapas Sass de cuadrícula incorporados, es posible personalizar completamente las clases de cuadrícula predefinidas. Cambiar el número de niveles, las dimensiones de la consulta de medios y el ancho del contenedor y luego vuelva a compilar.
 
-##### **
-
-**
+##### 
 
 ##### **Columnas y canalones**
 
@@ -588,9 +614,7 @@ Código
 
 <pre>$grid-columns: 12 !default;<br/>$grid-gutter-width: 30px !default;</pre>
 
-##### **
-
-**
+##### 
 
 ##### **Niveles de cuadrícula**
 
@@ -630,7 +654,7 @@ Los elementos <html>y <body>se actualizan para proporcionar mejores valores pred
 
 Las fuentes web predeterminadas (Helvetica Neue, Helvetica y Arial) se han eliminado en Bootstrap 4 y se han reemplazado con una "pila de fuentes nativas" para una representación de texto óptima en cada dispositivo y sistema operativo.
 
-<pre>$font-family-sans-serif:<br/>// Safari for macOS and iOS (San Francisco)<br/>-apple-system,<br/>// Chrome &lt; 56 for macOS (San Francisco)<br/>BlinkMacSystemFont,<br/>// Windows<br/>&#34;Segoe UI&#34;,<br/>// Android<br/>Roboto,<br/>// Basic web fallback<br/>&#34;Helvetica Neue&#34;, Arial,<br/>// Linux<br/>&#34;Noto Sans&#34;,<br/>// Sans serif fallback<br/>sans-serif,<br/>// Emoji fonts<br/>&#34;Apple Color Emoji&#34;, &#34;Segoe UI Emoji&#34;, &#34;Segoe UI Symbol&#34;, &#34;Noto Color Emoji&#34; !default;</pre>
+<pre>$font-family-sans-serif:<br/>// Safari for macOS and iOS (San Francisco)<br/>-apple-system,<br/>// Chrome < 56 for macOS (San Francisco)<br/>BlinkMacSystemFont,<br/>// Windows<br/>"Segoe UI",<br/>// Android<br/>Roboto,<br/>// Basic web fallback<br/>"Helvetica Neue", Arial,<br/>// Linux<br/>"Noto Sans",<br/>// Sans serif fallback<br/>sans-serif,<br/>// Emoji fonts<br/>"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;</pre>
 
 Esto font-family se aplica a <body> y se hereda automáticamente de forma global a través de Bootstrap. Para cambiar el global font-family, actualice $font-family-base y recompile Bootstrap.
 
@@ -640,14 +664,12 @@ Todos los elementos de encabezado, por ejemplo, <h1> y <p> se restablecen para q
 
 | Bóveda | Ejemplo |
 | - | - |
-|  | **h1. Encabezado de Bootstrap** |
-|  | **h2. Encabezado de ****Bootstrap** |
-|  | **h3. Encabezado de Bootstrap** |
-|  | **h4. Encabezado de Bootstrap** |
-|  | **h5. Encabezado de Bootstrap** |
-|  | **h6. Encabezado de Bootstrap** |
-
-####
+|   | **h1. Encabezado de Bootstrap** |
+|   | **h2. Encabezado de ****Bootstrap** |
+|   | **h3. Encabezado de Bootstrap** |
+|   | **h4. Encabezado de Bootstrap** |
+|   | **h5. Encabezado de Bootstrap** |
+|   | **h6. Encabezado de Bootstrap** |
 
 #### Listas
 
@@ -655,9 +677,7 @@ A todas las listas— <ul>, <ol>y <dl>— se le han eliminados los margin-top y 
 
 Para un estilo más simple, una jerarquía clara y un mejor espaciado, las listas de descripción han actualizado margin . <dd> de reposición margin-left a  0 y complemento margin-bottom: .5rem. <dt> si están en negrita .
 
-#### **
-
-**
+#### 
 
 #### **Texto preformateado**
 
@@ -665,7 +685,7 @@ El elemento <pre> se reinicia para eliminar su margin-top y usar unidades rem pa
 
 <pre>.example-element {<br/>margen inferior: 1rem;<br/>}</pre>
 
-####
+
 
 #### Tablas
 
@@ -679,9 +699,7 @@ Esta es una tabla de ejemplo, y este es su título para describir el contenido.
 | Celda de tabla | Celda de tabla | Celda de tabla | Celda de tabla |
 | Celda de tabla | Celda de tabla | Celda de tabla | Celda de tabla |
 
-#### **
-
-**
+#### 
 
 #### **Formularios**
 
@@ -694,33 +712,7 @@ Se han reiniciado varios elementos de formulario para estilos base más simples.
 * <textarea> Los mensajes de correo electrónico se modifican para que solo se puedan cambiar de tamaño verticalmente, ya que el cambio de tamaño horizontal a menudo "rompe" el diseño de página.
 * <button> y los <input> elementos button tienen cursor: pointer when :not(:disabled).
 
-Estos cambios, y más, se muestran a continuación.
-
-Leyenda de ejemplo
-
-Entrada de ejemplo
-
-Ejemplo seleccionar
-
-Marque esta casilla de verificación
-
-La primera opción es esto y aquello La opción dos es algo más que también es muy largo para demostrar el envoltorio de estos elegantes controles de formulario. La opción tres está deshabilitada
-
-Ejemplo textarea
-
-Fecha de ejemplo
-
-Tiempo de ejemplo
-
-Salida de ejemplo 100
-
-Enviar botón
-
-Enviar botón
-
-##### **
-
-**
+##### 
 
 ##### **Punteros en botones**
 
@@ -730,11 +722,9 @@ Botón de elemento sin botón
 
 Copiar
 
-<pre>&lt;span role=&#34;button&#34; tabindex=&#34;0&#34;&gt;Non-button element button&lt;/span&gt;</pre>
+`<pre><span role="button" tabindex="0">Non-button element button</span></pre>`
 
-#### **
-
-**
+#### 
 
 #### **Elementos **varios
 
@@ -748,21 +738,15 @@ El elemento <address> se actualiza para restablecer el navegador predeterminado 
 *Nombre completo**
 *[*first.last@example.com*](mailto:first.last@example.com)
 
-##### **
-
-**
+##### 
 
 ##### **Blockquote**
 
 El valor predeterminado margin en blockquotes es 1em 40px, por lo que lo restablecemos a 0 0 1rem algo más consistente con otros elementos.
 
-##### **
-
-**
-
 ##### **Elementos en línea**
 
-El <abbr> elemento recibe un estilo básico para que se destaque entre el texto del párrafo.
+El `<abbr>` elemento recibe un estilo básico para que se destaque entre el texto del párrafo.
 
 ### Tipografía
 
@@ -774,9 +758,7 @@ Bootstrap establece estilos básicos de visualización, tipografía y enlaces gl
 * Para una escala de tipos más inclusiva y accesible, asumimos la raíz predeterminada del navegador font-size (generalmente 16px) para que los visitantes puedan personalizar los valores predeterminados de su navegador según sea necesario.
 * Establezca el color del enlace global mediante $link-colory aplique subrayados de enlace solo en :hover.
 
-#### **
-
-**
+#### 
 
 #### **Encabezados**
 
@@ -784,59 +766,59 @@ Todos los títulos HTML, <h1>hasta <h6>, están disponibles.
 
 Código
 
-<pre>&lt;h1&gt;h1. Bootstrap heading&lt;/h1&gt;<br/>&lt;h2&gt;h2. Bootstrap heading&lt;/h2&gt;<br/>&lt;h3&gt;h3. Bootstrap heading&lt;/h3&gt;<br/>&lt;h4&gt;h4. Bootstrap heading&lt;/h4&gt;<br/>&lt;h5&gt;h5. Bootstrap heading&lt;/h5&gt;<br/>&lt;h6&gt;h6. Bootstrap heading&lt;/h6&gt;</pre>
+```
+<pre><h1>h1. Bootstrap heading</h1><br/><h2>h2. Bootstrap heading</h2><br/><h3>h3. Bootstrap heading</h3><br/><h4>h4. Bootstrap heading</h4><br/><h5>h5. Bootstrap heading</h5><br/><h6>h6. Bootstrap heading</h6></pre>
+```
+
+
 
 .h1 a .h6 y clases intermedias también están disponibles, para cuando desee hacer coincidir el estilo de fuente de un encabezado :
 
-<pre>&lt;p class=&#34;h1&#34;&gt;h1. Bootstrap heading&lt;/p&gt;<br/>&lt;p class=&#34;h2&#34;&gt;h2. Bootstrap heading&lt;/p&gt;<br/>&lt;p class=&#34;h3&#34;&gt;h3. Bootstrap heading&lt;/p&gt;<br/>&lt;p class=&#34;h4&#34;&gt;h4. Bootstrap heading&lt;/p&gt;<br/>&lt;p class=&#34;h5&#34;&gt;h5. Bootstrap heading&lt;/p&gt;<br/>&lt;p class=&#34;h6&#34;&gt;h6. Bootstrap heading&lt;/p&gt;</pre>
+```
+<pre><p class="h1">h1. Bootstrap heading</p><br/><p class="h2">h2. Bootstrap heading</p><br/><p class="h3">h3. Bootstrap heading</p><br/><p class="h4">h4. Bootstrap heading</p><br/><p class="h5">h5. Bootstrap heading</p><br/><p class="h6">h6. Bootstrap heading</p></pre>
+```
 
-##### **
 
-**
 
 ##### **Personalización de títulos**
 
 Utilice las clases de utilidad incluidas para recrear el pequeño texto del encabezado secundario de Bootstrap 3.
 
-##### Encabezado de pantalla elegante **con te****xto secundario difuminado**
+##### Encabezado de pantalla elegante con texto secundario difuminado
 
 Copiar
 
-<pre>&lt;h3&gt;<br/>Fancy display heading<br/>&lt;small class=&#34;text-muted&#34;&gt;With faded secondary text&lt;/small&gt;<br/>&lt;/h3&gt;</pre>
+```
+<pre><h3><br/>Fancy display heading<br/><small class="text-muted">With faded secondary text</small><br/></h3></pre>
+```
 
-#### **
 
-**
 
 #### **Mostrar títulos**
 
 Los elementos de encabezado tradicionales están diseñados para funcionar mejor en la carne del contenido de su página. Cuando necesite que un encabezado se destaque, considere usar un encabezado de visualización , un estilo de encabezado más grande y un poco más obstinado. Tenga en cuenta que estos encabezados no responden de forma predeterminada, pero es posible habilitar [tamaños de fuente receptivos](https://getbootstrap.com/docs/4.5/content/typography/#responsive-font-sizes) .
 
-<pre> &lt;h1 class=&#34;display-1&#34;&gt;Display 1&lt;/h1&gt;<br/>&lt;h1 class=&#34;display-2&#34;&gt;Display 2&lt;/h1&gt;<br/>&lt;h1 class=&#34;display-3&#34;&gt;Display 3&lt;/h1&gt;<br/>&lt;h1 class=&#34;display-4&#34;&gt;Display 4&lt;/h1&gt;</pre>
-
-#### **
-
-**
+ ```
+<pre> <h1 class="display-1">Display 1</h1><br/><h1 class="display-2">Display 2</h1><br/><h1 class="display-3">Display 3</h1><br/><h1 class="display-4">Display 4</h1></pre>
+ ```
 
 #### **Dirigir**
 
 Haga que un párrafo se destaque agregando .lead.
 
-<pre>&lt;p class=&#34;lead&#34;&gt;<br/>Párrafo destacado.<br/>&lt;/p&gt;</pre>
+`<pre><p class="lead"><br/>Párrafo destacado.<br/></p></pre>`
 
 ##### **Alineación**
 
 Utilice las utilidades de texto según sea necesario para cambiar la alineación de su cita en bloque.
 
-<pre>&lt;blockquote class=&#34;blockquote text-center&#34;&gt;<br/>&lt;p class=&#34;mb-0&#34;&gt;Renglón 1&lt;/p&gt;<br/>&lt;footer class=&#34;blockquote-footer&#34;&gt;Renglón 2 &lt;cite title=&#34;Source Title&#34;&gt;Título&lt;/cite&gt;&lt;/footer&gt;<br/>&lt;/blockquote&gt;</pre>
+```
+<pre><blockquote class="blockquote text-center"><br/><p class="mb-0">Renglón 1</p><br/><footer class="blockquote-footer">Renglón 2 <cite title="Source Title">Título</cite></footer><br/></blockquote></pre>
+```
 
 ### Tablas
 
 Documentación y ejemplos para el estilo opcional de tablas (dado su uso frecuente en complementos de JavaScript) con Bootstrap.
-
-#### **
-
-**
 
 #### **Ejemplos**
 
@@ -852,7 +834,11 @@ Usando el marcado de tabla más básico, así es como .table se ven las tablas b
 
 Copiar
 
-<pre>&lt;table class=&#34;table&#34;&gt;<br/>&lt;thead&gt;<br/>&lt;tr&gt;<br/>&lt;th scope=&#34;col&#34;&gt;#&lt;/th&gt;<br/>&lt;th scope=&#34;col&#34;&gt;First&lt;/th&gt;<br/>&lt;th scope=&#34;col&#34;&gt;Last&lt;/th&gt;<br/>&lt;th scope=&#34;col&#34;&gt;Handle&lt;/th&gt;<br/>&lt;/tr&gt;<br/>&lt;/thead&gt;<br/>&lt;tbody&gt;<br/>&lt;tr&gt;<br/>&lt;th scope=&#34;row&#34;&gt;1&lt;/th&gt;<br/>&lt;td&gt;Mark&lt;/td&gt;<br/>&lt;td&gt;Otto&lt;/td&gt;<br/>&lt;td&gt;@mdo&lt;/td&gt;<br/>&lt;/tr&gt;<br/>&lt;tr&gt;<br/>&lt;th scope=&#34;row&#34;&gt;2&lt;/th&gt;<br/>&lt;td&gt;Jacob&lt;/td&gt;<br/>&lt;td&gt;Thornton&lt;/td&gt;<br/>&lt;td&gt;@fat&lt;/td&gt;<br/>&lt;/tr&gt;<br/>&lt;tr&gt;<br/>&lt;th scope=&#34;row&#34;&gt;3&lt;/th&gt;<br/>&lt;td&gt;Larry&lt;/td&gt;<br/>&lt;td&gt;the Bird&lt;/td&gt;<br/>&lt;td&gt;@twitter&lt;/td&gt;<br/>&lt;/tr&gt;<br/>&lt;/tbody&gt;<br/>&lt;/table&gt;</pre>
+```
+<pre><table class="table"><br/><thead><br/><tr><br/><th scope="col">#</th><br/><th scope="col">First</th><br/><th scope="col">Last</th><br/><th scope="col">Handle</th><br/></tr><br/></thead><br/><tbody><br/><tr><br/><th scope="row">1</th><br/><td>Mark</td><br/><td>Otto</td><br/><td>@mdo</td><br/></tr><br/><tr><br/><th scope="row">2</th><br/><td>Jacob</td><br/><td>Thornton</td><br/><td>@fat</td><br/></tr><br/><tr><br/><th scope="row">3</th><br/><td>Larry</td><br/><td>the Bird</td><br/><td>@twitter</td><br/></tr><br/></tbody><br/></table></pre>
+```
+
+
 
 También podés invertir los colores, con texto claro sobre fondos oscuros, con .table-dark.
 
@@ -864,11 +850,9 @@ También podés invertir los colores, con texto claro sobre fondos oscuros, con 
 
 Código
 
-<pre>&lt;table class=&#34;table table-dark&#34;&gt;<br/>&lt;thead&gt;<br/>&lt;tr&gt;<br/>&lt;th scope=&#34;col&#34;&gt;#&lt;/th&gt;<br/>&lt;th scope=&#34;col&#34;&gt;First&lt;/th&gt;<br/>&lt;th scope=&#34;col&#34;&gt;Last&lt;/th&gt;<br/>&lt;th scope=&#34;col&#34;&gt;Handle&lt;/th&gt;<br/>&lt;/tr&gt;<br/>&lt;/thead&gt;<br/>&lt;tbody&gt;<br/>&lt;tr&gt;<br/>&lt;th scope=&#34;row&#34;&gt;1&lt;/th&gt;<br/>&lt;td&gt;Mark&lt;/td&gt;<br/>&lt;td&gt;Otto&lt;/td&gt;<br/>&lt;td&gt;@mdo&lt;/td&gt;<br/>&lt;/tr&gt;<br/>&lt;tr&gt;<br/>&lt;th scope=&#34;row&#34;&gt;2&lt;/th&gt;<br/>&lt;td&gt;Jacob&lt;/td&gt;<br/>&lt;td&gt;Thornton&lt;/td&gt;<br/>&lt;td&gt;@fat&lt;/td&gt;<br/>&lt;/tr&gt;<br/>&lt;tr&gt;<br/>&lt;th scope=&#34;row&#34;&gt;3&lt;/th&gt;<br/>&lt;td&gt;Larry&lt;/td&gt;<br/>&lt;td&gt;the Bird&lt;/td&gt;<br/>&lt;td&gt;@twitter&lt;/td&gt;<br/>&lt;/tr&gt;<br/>&lt;/tbody&gt;<br/>&lt;/table&gt;</pre>
-
-#### **
-
-**
+```
+<pre><table class="table table-dark"><br/><thead><br/><tr><br/><th scope="col">#</th><br/><th scope="col">First</th><br/><th scope="col">Last</th><br/><th scope="col">Handle</th><br/></tr><br/></thead><br/><tbody><br/><tr><br/><th scope="row">1</th><br/><td>Mark</td><br/><td>Otto</td><br/><td>@mdo</td><br/></tr><br/><tr><br/><th scope="row">2</th><br/><td>Jacob</td><br/><td>Thornton</td><br/><td>@fat</td><br/></tr><br/><tr><br/><th scope="row">3</th><br/><td>Larry</td><br/><td>the Bird</td><br/><td>@twitter</td><br/></tr><br/></tbody><br/></table></pre>
+```
 
 #### **Opciones de cabecera de **tabla
 
@@ -888,17 +872,22 @@ Similar a las tablas y tablas oscuras, podés usar las clases modificadoras .the
 
 Código
 
-<pre>&lt;table class=&#34;table&#34;&gt;<br/>&lt;thead class=&#34;thead-dark&#34;&gt;<br/>&lt;tr&gt;<br/>&lt;th scope=&#34;col&#34;&gt;#&lt;/th&gt;<br/>&lt;th scope=&#34;col&#34;&gt;First&lt;/th&gt;<br/>&lt;th scope=&#34;col&#34;&gt;Last&lt;/th&gt;<br/>&lt;th scope=&#34;col&#34;&gt;Handle&lt;/th&gt;<br/>&lt;/tr&gt;<br/>&lt;/thead&gt;<br/>&lt;tbody&gt;<br/>&lt;tr&gt;<br/>&lt;th scope=&#34;row&#34;&gt;1&lt;/th&gt;<br/>&lt;td&gt;Mark&lt;/td&gt;<br/>&lt;td&gt;Otto&lt;/td&gt;<br/>&lt;td&gt;@mdo&lt;/td&gt;<br/>&lt;/tr&gt;<br/>&lt;tr&gt;<br/>&lt;th scope=&#34;row&#34;&gt;2&lt;/th&gt;<br/>&lt;td&gt;Jacob&lt;/td&gt;<br/>&lt;td&gt;Thornton&lt;/td&gt;<br/>&lt;td&gt;@fat&lt;/td&gt;<br/>&lt;/tr&gt;<br/>&lt;tr&gt;<br/>&lt;th scope=&#34;row&#34;&gt;3&lt;/th&gt;<br/>&lt;td&gt;Larry&lt;/td&gt;<br/>&lt;td&gt;the Bird&lt;/td&gt;<br/>&lt;td&gt;@twitter&lt;/td&gt;<br/>&lt;/tr&gt;<br/>&lt;/tbody&gt;<br/>&lt;/table&gt;<br/> <br/>&lt;table class=&#34;table&#34;&gt;<br/>&lt;thead class=&#34;thead-light&#34;&gt;<br/>&lt;tr&gt;<br/>&lt;th scope=&#34;col&#34;&gt;#&lt;/th&gt;<br/>&lt;th scope=&#34;col&#34;&gt;First&lt;/th&gt;<br/>&lt;th scope=&#34;col&#34;&gt;Last&lt;/th&gt;<br/>&lt;th scope=&#34;col&#34;&gt;Handle&lt;/th&gt;<br/>&lt;/tr&gt;<br/>&lt;/thead&gt;<br/>&lt;tbody&gt;<br/>&lt;tr&gt;<br/>&lt;th scope=&#34;row&#34;&gt;1&lt;/th&gt;<br/>&lt;td&gt;Mark&lt;/td&gt;<br/>&lt;td&gt;Otto&lt;/td&gt;<br/>&lt;td&gt;@mdo&lt;/td&gt;<br/>&lt;/tr&gt;<br/>&lt;tr&gt;<br/>&lt;th scope=&#34;row&#34;&gt;2&lt;/th&gt;<br/>&lt;td&gt;Jacob&lt;/td&gt;<br/>&lt;td&gt;Thornton&lt;/td&gt;<br/>&lt;td&gt;@fat&lt;/td&gt;<br/>&lt;/tr&gt;<br/>&lt;tr&gt;<br/>&lt;th scope=&#34;row&#34;&gt;3&lt;/th&gt;<br/>&lt;td&gt;Larry&lt;/td&gt;<br/>&lt;td&gt;the Bird&lt;/td&gt;<br/>&lt;td&gt;@twitter&lt;/td&gt;<br/>&lt;/tr&gt;<br/>&lt;/tbody&gt;<br/>&lt;/table&gt;</pre>
+```
+<pre><table class="table"><br/><thead class="thead-dark"><br/><tr><br/><th scope="col">#</th><br/><th scope="col">First</th><br/><th scope="col">Last</th><br/><th scope="col">Handle</th><br/></tr><br/></thead><br/><tbody><br/><tr><br/><th scope="row">1</th><br/><td>Mark</td><br/><td>Otto</td><br/><td>@mdo</td><br/></tr><br/><tr><br/><th scope="row">2</th><br/><td>Jacob</td><br/><td>Thornton</td><br/><td>@fat</td><br/></tr><br/><tr><br/><th scope="row">3</th><br/><td>Larry</td><br/><td>the Bird</td><br/><td>@twitter</td><br/></tr><br/></tbody><br/></table><br/> <br/><table class="table"><br/><thead class="thead-light"><br/><tr><br/><th scope="col">#</th><br/><th scope="col">First</th><br/><th scope="col">Last</th><br/><th scope="col">Handle</th><br/></tr><br/></thead><br/><tbody><br/><tr><br/><th scope="row">1</th><br/><td>Mark</td><br/><td>Otto</td><br/><td>@mdo</td><br/></tr><br/><tr><br/><th scope="row">2</th><br/><td>Jacob</td><br/><td>Thornton</td><br/><td>@fat</td><br/></tr><br/><tr><br/><th scope="row">3</th><br/><td>Larry</td><br/><td>the Bird</td><br/><td>@twitter</td><br/></tr><br/></tbody><br/></table></pre>
+```
 
-#### **
 
-**
 
-#### **Filas **con** rayas**
+
+#### **Filas **con rayas
 
 Utilizando .table-striped para agregar rayas a cualquier fila de la tabla dentro del <tbody>.
 
-<pre>&lt;table class=&#34;table table-striped&#34;&gt;<br/>&lt;thead&gt;<br/>&lt;tr&gt;<br/>&lt;th scope=&#34;col&#34;&gt;#&lt;/th&gt;<br/>&lt;th scope=&#34;col&#34;&gt;First&lt;/th&gt;<br/>&lt;th scope=&#34;col&#34;&gt;Last&lt;/th&gt;<br/>&lt;th scope=&#34;col&#34;&gt;Handle&lt;/th&gt;<br/>&lt;/tr&gt;<br/>&lt;/thead&gt;<br/>&lt;/table&gt;</pre>
+```
+<pre><table class="table table-striped"><br/><thead><br/><tr><br/><th scope="col">#</th><br/><th scope="col">First</th><br/><th scope="col">Last</th><br/><th scope="col">Handle</th><br/></tr><br/></thead><br/></table></pre>
+```
+
+
 
 #### Recursos Varios.
 
@@ -912,21 +901,19 @@ Agregá .table-sm para hacer las tablas más compactas cortando el relleno de la
 
 Para definir un color de fondo es posible utilizar clases del tipo table en sus diferentes versiones en cada llamada a un <tr>, por ej:
 
-<pre>&lt;tr class=&#34;table-primary&#34;&gt;...&lt;/tr&gt;<br/>&lt;tr class=&#34;table-secondary&#34;&gt;...&lt;/tr&gt;<br/>&lt;tr class=&#34;table-success&#34;&gt;...&lt;/tr&gt;<br/>&lt;tr class=&#34;table-danger&#34;&gt;...&lt;/tr&gt;<br/>&lt;tr class=&#34;table-warning&#34;&gt;...&lt;/tr&gt;<br/>&lt;tr class=&#34;table-info&#34;&gt;...&lt;/tr&gt;<br/>&lt;tr class=&#34;table-light&#34;&gt;...&lt;/tr&gt;<br/>&lt;tr class=&#34;table-dark&#34;&gt;...&lt;/tr&gt;</pre>
+```
+<pre><tr class="table-primary">...</tr><br/><tr class="table-secondary">...</tr><br/><tr class="table-success">...</tr><br/><tr class="table-danger">...</tr><br/><tr class="table-warning">...</tr><br/><tr class="table-info">...</tr><br/><tr class="table-light">...</tr><br/><tr class="table-dark">...</tr></pre>
+```
+
+
 
 En cada punto de interrupción, podés utilizar .table-responsive para tablas de desplazamiento horizontal.
 
-<pre>&lt;div class=&#34;table-responsive&#34;&gt;<br/>&lt;table class=&#34;table&#34;&gt;<br/>...<br/>&lt;/table&gt;<br/>&lt;/div&gt;</pre>
-
-##### **
-
-**
-
 ##### **Punto de interrupción específico**
 
-Usá.table-responsive{-sm|-md|-lg|-xl} según sea necesario para crear tablas receptivas hasta un punto de interrupción en particular. Desde ese punto de interrupción en adelante, la tabla se comportará normalmente y no se desplazará horizontalmente.
+Usá.`table-responsive{-sm|-md|-lg|-xl}` según sea necesario para crear tablas receptivas hasta un punto de interrupción en particular. Desde ese punto de interrupción en adelante, la tabla se comportará normalmente y no se desplazará horizontalmente.
 
-<pre>&lt;div class=&#34;table-responsive-sm&#34;&gt;<br/>&lt;table class=&#34;table&#34;&gt;<br/>...<br/>&lt;/table&gt;<br/>&lt;/div&gt;</pre>
+`<pre><div class="table-responsive-sm"><br/><table class="table"><br/>...<br/></table><br/></div></pre>` 
 
 ### Imágenes
 
@@ -938,25 +925,17 @@ Responsive image
 
 Ejemplo:
 
-<pre>&lt;img src=&#34;...&#34; class=&#34;img-fluid&#34; alt=&#34;Responsive image&#34;&gt;</pre>
+<pre><img src="..." class="img-fluid" alt="Responsive image"></pre>
 
 ###### Imágenes SVG e Internet Explorer
 
 En Internet Explorer 10 y 11, las imágenes SVG .img-fluid tienen un tamaño desproporcionado. Para solucionar esto, agregá  width: 100%; o .w-100 donde sea necesario. Esta corrección dimensiona incorrectamente otros formatos de imagen, por lo que Bootstrap no la aplica automáticamente.
 
-#### **
-
-**
-
 #### **Miniaturas de imágenes**
 
 Además de las utilidades de radio de borde , podés utilizar .img-thumbnail para dar a una imagen una apariencia de borde redondeado de 1 px.
 
-<img src="..." alt="..." class="img-thumbnail">
-
-#### **
-
-**
+`<img src="..." alt="..." class="img-thumbnail">`
 
 #### **Alinear imágenes**
 
@@ -964,11 +943,19 @@ Alineá las imágenes con las clases flotantes auxiliares o las clases de alinea
 
 Las imágenes de nivel se pueden centrar usando la clase .mx-auto .
 
-<pre><p> &lt;img src=&#34;...&#34; class=&#34;rounded float-left&#34; alt=&#34;...&#34;&gt;</p><p>&lt;img src=&#34;...&#34; class=&#34;rounded float-right&#34; alt=&#34;...&#34;&gt;</p><p>&lt;img src=&#34;...&#34; class=&#34;rounded mx-auto d-block&#34; alt=&#34;...&#34;&gt;</p><p> </p><p>&lt;div class=&#34;text-center&#34;&gt;</p><p>&lt;img src=&#34;...&#34; class=&#34;rounded&#34; alt=&#34;...&#34;&gt;</p><p>&lt;/div&gt;</p></pre>
+```
+<pre><p> <img src="..." class="rounded float-left" alt="..."></p><p><img src="..." class="rounded float-right" alt="..."></p><p><img src="..." class="rounded mx-auto d-block" alt="..."></p><p> </p><p><div class="text-center"></p><p><img src="..." class="rounded" alt="..."></p><p></div></p></pre>
+```
+
+
 
 #### **Imagen**
 
 Si estás utilizando el elemento <picture> para especificar varios elementos <source> para un específico <img>, asegúrate de agregar las clases .img-* <img> .
 
-<pre> &lt;picture&gt;<br/>&lt;source srcset=&#34;...&#34; type=&#34;image/svg+xml&#34;&gt;<br/>&lt;img src=&#34;...&#34; class=&#34;img-fluid img-thumbnail&#34; alt=&#34;...&#34;&gt;<br/>&lt;/picture&gt;</pre>
+``` html
+<pre> <picture><br/><source srcset="..." type="image/svg+xml"><br/><img src="..." class="img-fluid img-thumbnail" alt="..."><br/></picture></pre>
+```
+
+
 
