@@ -1,12 +1,19 @@
-# Javascript ❤️
+# Javascript ❤️ Unidad 1
 
 ## Introduccion ¿Que es?
 
 * Es un lenguaje capaz que aportar soluciones a la mayoria de los ambitos tecnologicos.
+* Es un lenguaje de Scripting multiparadigma y debilmente tipado.
 * Es el unico lenguaje de programacion que entienden los navegadores.
 * Sirve para el desarollo**frontend**, desarollo para varias plataformas gracias a**NodeJS**, desarollo de aplicaciones mobiles nativas e hibridas y desarollo de aplicaciones de escritorio multiplataforma.
 * Es un lenguaje**levemente tipado**, su aprendizaje al principio es rapido, pero luego es necesario profundizar.
 * Librerias como JQuery y React, o frameworks como Angular, VueJS o Ionic estan basados en Javascript.
+* Los programas escritos en JS son Scripts, se van interpretando a medida que se carga la pagina. Se interpreta linea por linea.
+* JS puede -> Cambiar todo el contenido de la pagina, enviar informacion al servidor, descargar archivos, almacenamiento local en el navegador, etc..
+
+## ¿Qué NO es?
+
+No puede acceder al hardware, ni a discos ni a memorias. Se limita al uso en una pagina web.
 
 ## Historia
 
@@ -32,8 +39,6 @@ Hubo una version abandonada de ECMA, la version 4, porque sus propuestas no tuvi
 
 La version 5 incluyo soporte para JSON, getters y setters, strict mode y otros, tambien se definio la implementacion del modelo de objetos en los navegadores (DOM).
 La version mas revolucionaria fue la version 6 (ECMAScript 2015). Presento clases y objetos para JS, modulos, operadores nuevos, funciones lambda, iteradores, etc.. A partir de esta version, hubo un compromiso de presentar una version distinta por año, actualmente, existe ECMA9 que salio en 2018.
-
-# JavaScript
 
 ## Lado Cliente
 
@@ -68,30 +73,20 @@ console.log("Hola")
 ```
 
 * Si quiero que el mensaje se muestre en azul, como "informacion" `console.info()`
-
 * Si quiero mostrar un error `console.error()`
-
 * Si quiero mostrar una advertencia `console.warn()`
-
 * Si quiero ver una representación de un objeto en JS  `console.dir(object)`
-
 * Si quiero ver todos los links de la pagina `console.dir(document.links)`
-
 * Si quiero ver los XML de todos los objetos descendientes de un objeto `console.dirxml(object)`
-
 * Si quiero limpiar la ventana de la consola `console.clear()`
-
 * Si quiero un mensaje personalizado `console.log("%cMensaje de color verde y grande", "color: green; font-size: x-large;")`
-
 * Si quiero crear una tabla simple de dos columnas `console.table({Nombre: "Hola", Apellido: "Hola"})`
-
 * Si quiero una tabla de 3 columnas
 
   ```javascript
   var gente= [["Hola", "Holis"], ["Pepe", "Perez"], ["Juan", "Lopez"]]
   console.table(gente)
   ```
-
 * Tabla con 3 columnas y encabezados
 
   ```javascript
@@ -104,7 +99,6 @@ console.log("Hola")
   oficina.Empleado = new Person("Juan", "Lopez");
   console.table(oficina);
   ```
-
 * Tabla con 4 columnas y encabezados
 
   ```javascript
@@ -120,8 +114,6 @@ console.log("Hola")
       Enlace: "https://juanlopez.com"}
   ];
   ```
-
-  
 
 # Empezando con el Lenguaje
 
@@ -143,15 +135,15 @@ Las que quieras*/
 
 **Mayusculas y Minusculas**
 
-Se respetan. No es lo mismo `alert()` que `Alert()`. Lo mismo con las variables. 
+Se respetan. No es lo mismo `alert()` que `Alert()`. Lo mismo con las variables.
 
 **Separacion de instrucciones**
 
-JS separa las instrucciones por ; o por un salto de linea. Los puntos y coma no son necesarios, solo que no podemos poner dos instrucciones en una misma linea. 
+JS separa las instrucciones por ; o por un salto de linea. Los puntos y coma no son necesarios, solo que no podemos poner dos instrucciones en una misma linea.
 
 # Variables en Javascript
 
-**Qué es una variable?** Es un espacio de memoria donde se almacena un dato. Es una caja que almacena un dato, y esta caja tambien tiene un nombre. 
+**Qué es una variable?** Es un espacio de memoria donde se almacena un dato. Es una caja que almacena un dato, y esta caja tambien tiene un nombre.
 
 ```javascript
 sumando1 = 23
@@ -159,7 +151,7 @@ sumando2 = 23
 sumatotal = sumando1 + sumando2
 ```
 
-**¿Cómo debe ser el nombre?** 
+**¿Cómo debe ser el nombre?**
 `Edad, paisDeNacimiento, _nombre, $elemento y Otr$_Nombres`, no pueden empezar con numeros
 
 **¿Cómo NO debe ser el nombre?**
@@ -182,9 +174,19 @@ let var //Esta variable solo esta declarada en su bloque de codigo, es decir, en
 const var = 1 //Constante
 ```
 
+## Tipos de datos
+
+* String -> Secuencia de caracteres
+* Number -> Numero
+* Boolean -> True o False
+* Null -> Valor nulo
+* Undefined -> Sin definir
+* Symbol -> Tipo de dato cuyos casos son unicos e inmutables
+* Object -> Objeto {}. Puede tener mas variables en el interior.
+
 ## Conversiones Numericas
 
-**parseInt() y parseFloat()** 
+**parseInt() y parseFloat()**
 
 Funciones creadas para analizar un string y devolver un numero si es posible, ignorando los espacios. Si el primer caracter encontrado no puede ser convertido a numero, el resultado sera `NaN (Not a number)`
 
@@ -209,7 +211,7 @@ parseInt("10",16); //16
 
 **parseFloat(string)**
 
-Convierte el String a un numero con coma. 
+Convierte el String a un numero con coma.
 
 ```javascript
 parseFloat("3.14"); // 3.14
@@ -226,7 +228,7 @@ parseFloat(null); // NaN
 
 **Number()**
 
-Es especificamente para la conversion de tipos. Es un constructor para crear objetos del tipo number. 
+Es especificamente para la conversion de tipos. Es un constructor para crear objetos del tipo number.
 
 ```javascript
 var myNumber = new Number(14); //Constructor
@@ -254,7 +256,7 @@ Number(false); // 0
 
 **Conversion explicita**
 
-Es una forma de conversion rapida a numero. 
+Es una forma de conversion rapida a numero.
 
 ```
 var myNumberValue = "8" - 0; // number 8
@@ -294,3 +296,10 @@ Resumiendo :
 - Number() y '+' convierten el string vacio en 0.
 - parseInt() y parseFloat() de un boolean es NaN.
 - Number() y '+' de un boolean devuelven 0 para false y 1 para true.
+
+# Vincular JS con HTML
+
+Hay dos maneras:
+
+* Directamente en el HTML `<script> Codigo </script>`
+* Importandolo de un archivo externo `<script src="archivo.js"></script>`
