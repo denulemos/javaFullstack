@@ -61,3 +61,6 @@ El tipo de texto es: string
 El tipo de fecha es: object
 ```
 
+
+
+
